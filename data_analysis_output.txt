@@ -1,0 +1,1144 @@
+
+=== BASIC INFO ===
+Sheet name: Respostas ao formulário 1
+Total rows (responses): 21
+Total columns: 143
+
+=== ALL COLUMN HEADERS ===
+[1] Carimbo de data/hora
+[2] Quantas pessoas, incluindo você, moram na sua atual residência?
+[3] Qual a renda familiar mensal aproximadamente?
+[4] A familia recebe algum benefício do governo?  (Marque todas as opções que se aplicam)   
+[5] Quem é o principal provedor (a) financeiro (a) da casa hoje?
+[6] Há idosos (60 anos ou mais) na sua moradia?  
+[7] Há pessoas com deficiência na sua moradia?
+[8] Atualmente, algum adolescente de até 17 anos que mora nesta residência, já passou pela experiência da maternidade/paternidade?
+[9] A mulher de referência da família é:
+[10] Idade da mulher de referência da casa  (mãe, avó, tia, madrinha, madrasta)
+[11] A mulher de referência é mãe?
+[12] A mulher de referência é mãe solo?
+(Cria os filhos sem a presença de um companheiro ou companheira)
+[13] Raça da mulher de referência da casa (mãe, avó, tia, madrinha, madrasta)
+[14] Escolaridade da mulher de referência da casa (mãe, avó, tia, madrinha, madrasta)
+[15] Ocupação atual da mulher de referência da casa (mãe, avó, tia, madrinha, madrasta)
+[16] Há quanto tempo a mulher reside no endereço atual?
+[17] O homem de referência da família é:
+[18] Idade do homem de referência da casa  (pai, avô, tio, padrinho, padrasto)
+[19] O homem de referência é pai?
+[20] O homem de referência é pai solo?
+(Cria os filhos sem a presença de um companheiro ou companheira)
+[21] Raça do homem de referência da casa  (pai, avô, tio, padrinho, padrasto)
+[22] Escolaridade do homem de referência da casa  (pai, avô, tio, padrinho, padrasto)
+[23] Ocupação atual do homem de referência da casa  (pai, avô, tio, padrinho, padrasto)
+[24] Há quanto tempo o homem reside no endereço atual?
+[25] Quantas crianças de 0 a 3 anos moram na sua casa?
+[26] As crianças de 0 a 3 frequentam a creche?
+[27] Quantas crianças de 4 a 6 anos moram na sua casa?
+[28] As crianças de 4 a 6 anos frequentam regulamente a escola?
+[29] Quantas crianças de 7 a 11 anos moram na sua casa?
+[30] As crianças de 7 a 11 anos frequentam regulamente a escola?
+[31] Caso as crianças não estejam matriculadas, informe abaixo o motivo
+[32] Em qual rede escolar as crianças estudam?
+[33] Em qual bairro a escola das crianças se localiza?
+[34] Qual meio de locomoção da(s) criança(s) até a escola?
+[35] Como foi o estudo da(s) criança(s) durante a pandemia?  
+[36] Atualmente, a(s) criança(s) apresentam dificuldades na escola?  
+[37] Quais dificuldades a criança apresenta na escola? 
+[38] As crianças tem acesso a atividades física (futebol, vôlei, basquete e outros) regulamente fora da escola?
+[39] As crianças tem acesso a atividades culturais? (Cinema, teatros, museus, bibliotecas e outros)
+[40] Quais espaços as crianças brincam atualmente?
+[41] Se sim, qual tipo de deficiência a criança possui?
+[42] Alguma das crianças possui transtornos diagnosticados? Quais?
+[43] As crianças recebem algum benefício do governo?  
+[44] Quais benefícios do governo a criança recebe? 
+[45] Alguma das crianças realiza atualmente alguma atividade remunerada para ajudar na renda familiar?
+[46] Quantos adolescentes de 12 a 14 anos moram na sua casa?
+[47] Os adolescentes de 12 a 14 anos frequentam regulamente a escola?
+[48] Quantas adolescentes de 15 a 17 anos moram na sua casa?
+[49] Os adolescentes de 15 a 17 anos frequentam regulamente a escola?
+[50] Caso os adolescentes não estejam matriculados, informe abaixo o motivo
+[51] Em qual rede escolar os adolescentes estudam?
+[52] Em qual bairro a escola dos adolescentes se localiza?
+[53] Qual meio de locomoção dos adolescentes até a escola?
+[54] Como foi o estudo dos adolescentes durante a pandemia?  
+[55] Atualmente, os adolescentes apresentam dificuldades na escola?  
+[56] Quais dificuldades os adolescentes apresentam na escola? 
+[57] Os adolescentes têm acesso a atividades física (futebol, vôlei, basquete e outros) regulamente fora da escola?
+[58] Os adolescentes têm acesso a atividades culturais? (Cinema, teatros, museus, bibliotecas e outros)
+[59] Quais espaços os adolescentes brincam atualmente?
+[60] se sim, quais tipo de deficiência o  adolescente possui?
+[61] se sim, Quais transtornos diagnósticado o adolescentes possui ?
+[62] Os adolescentes recebem algum benefício do governo?  
+[63] Quais benefícios do governo o adolescente recebe? 
+[64] Algum dos adolescentes realiza atualmente alguma atividade remunerada para ajudar na renda familiar?
+[65] Gênero da pessoa responsável pela moradia/familia
+[66] Tipo de domicílio que sua família mora
+[67] Tipo de propriedade de moradia atual da família
+[68] Quantidade de cômodos no total tem sua casa (sem contar banheiros)
+[69] Quantidade de banheiros funcionais que existem na sua casa
+[70] A moradia da familia apresenta problemas estruturais?  
+[71] Quais são esses problemas estruturais da moradia?
+[72] Sobre a água encanada da moradia 
+[73] Qual é o tipo de abastecimento de água da sua casa?
+[74] Com qual frequência falta água?  
+[75] O lixo é coletado regularmente pelo serviço de limpeza pública?  
+[76] Qual destino do lixo da moradia da família?
+[77] Qual tipo de esgotamento sanitário da moradia da família?
+[78] Existe esgoto a céu aberto próximo a sua moradia?  
+[79] Sua casa possui energia elétrica?
+[80] Sua moradia é atingida por alagamentos e enchentes?  
+[81] As enchentes e/ou alagamentos já causaram prejuízos na sua moradia?
+[82] Com que frequência sua moradia é atingida por alagamentos ou enchentes? 
+[83] Quais prejuízos sua moradia já teve pelas fortes chuvas, alagamentos e enchentes?
+[84] Quando ocorrem chuvas fortes, você percebe acúmulo de lixo trazido pela água? (de outras áreas ou bairros)  
+[85] Após chuvas fortes, aparecem animais peçonhentos, insetos e não domésticos na sua moradia ou nas proximidades?  
+[86] Quais tipos de animais? (pode marcar mais de uma opção):  
+[87] As enchentes e/ou alagamentos já causaram prejuízos à sua familia? Quais?
+[88] Já houve casos de obito/falecimento de pessoas da na comunidade devido a enchente e alagamentos?
+[89] Sua família é inscrita no Cadastro Único (CadÚnico)?  
+[90] Conhece o CRAS ou CREAS que atende seu bairro? (Centro de Referência de Assistência Social) 
+[91] Sua família utiliza ou já utilizou o CRAS/ CREAS?  
+[92] Há pessoas com doenças crônicas em sua moradia?  
+[93] Qual rede de saúde sua familia utiliza?
+[94] Todos da sua família possui carteira do SUS?
+[95] Quando precisam de atendimento, sua família consegue acessar algum serviço de saúde normalmente?
+[96] Algum membro da sua família utiliza com frequência serviços de saúde?  
+[97] Você ou alguém da sua família já deixou de procurar atendimento de saúde mesmo precisando?  
+[98] Com que frequência você ou sua família utilizam serviços de saúde?  
+[99] Já houve situação de emergência em que não conseguiu atendimento de saúde?
+[100] Algum membro da família já teve doenças ligadas à água nos últimos 6 meses?  (leptospirose, diarreia, micoses e outros)
+[101] Quais doenças ligadas a água algum membro da sua família já teve nos ultimos 6 meses?
+[102]  Há acompanhamento psicológico na família?
+[103] O que mais preocupa sua família hoje em relação a saúde?  
+[104] Na sua casa possui acesso à internet?  
+[105] Quais formas de acesso a internet na sua casa?
+[106] O que deveria melhorar na educação dos estudantes da sua casa?
+[107] Como você avalia o acesso à educação da sua família?
+[108] Você e sua família conhecem serviços ou instituições que ajudam em situações de risco?  
+[109]  Em alguma situação de risco, você e sua família já procurou algum serviço público?  
+[110] Se sim, quais serviços você e sua família já utilizaram?  
+[111] Quando você e sua família procuraram esses serviços, houve retorno/atendimento?  
+[112] Sua família consegue receber encomendas (correios, compras online, entregas) diretamente na sua casa?  
+[113] Se não, como você costuma receber suas encomendas?
+[114] Seu bairro possui transporte publico? (Ônibus)
+[115] Como você avalia o transporte público do seu bairro?
+[116] Nos últimos 3 meses, houve momento em que faltou comida na sua casa?  
+[117] Com que frequência isso aconteceu ou acontece de faltar comida da sua casa?  
+[118] Você recebe algum tipo de ajuda alimentar? (benefício, cesta básica, doação, etc.)
+[119] A família costuma fazer quantas alimentações no dia?
+[120] Sua família já passou por alguma dessas situações? (marque as que se aplicam)  
+[121] Você se sente seguro(a) onde mora?
+[122] Há áreas de risco próximas (rio, mangue, encosta)?
+[123] Alguém da família já passou por situação de violência (verbal, física, moral e outras)?
+[124] Algum adulto da casa não sabe ler ou escrever?
+[125] Existem locais da comunidade que você evita?  
+[126] As crianças e adolescentes podem brincar na rua com segurança?  
+[127] A rua da comunidade é pavimentada?
+[128] Quais são os principais problemas do bairro?  
+[129] Você ou sua família já ouviram ou leram comentários preconceituosos ou maldosos sobre o local que moram?
+[130] 
+O que mais ajudaria a melhorar a vida da sua família?
+[131] Você conhece o INSTITUTO ÁDAPO?  
+[132] Como você conheceu o INSTITUTO ÁDAPO?  
+[133] Você sabe quais atividades o INSTITUTO ÁDAPO realiza?  
+[134] Você ou alguém da sua família já participou de alguma atividade?  
+[135] Quem da sua família participa das atividades do INSTITUTO ÁDAPO?  
+[136] Como você avalia as atividades do ÁDAPO?  
+[137] Quais tipos de atividade você gostaria que o INSTITUTO ÁDAPO oferecesse? 
+[138] Você teria alguma sugestão ou conselho para a melhoria das atividades do INSTITUTO ÁDAPO na sua comunidade?  
+[139] Alguma das crianças possui algum tipo de deficiência?
+[140] Alguma das crianças possui algum tipo de transtorno?
+[141] Algum adolescente possui algum tipo de transtorno?
+[142] Algum dos adolescentes possui algum tipo de deficiência?
+[143] Com que frequência sua familia consome frutas, legumes, verduras e hortaliças?
+
+=== COLUMN ANALYSIS (unique values per column) ===
+
+[1] "Carimbo de data/hora"
+  Responses: 21/21 | Unique: 21
+    "46145.66693179398": 1
+    "46145.668630115746": 1
+    "46145.67965810186": 1
+    "46145.68301443287": 1
+    "46145.69467804398": 1
+    "46145.696445625": 1
+    "46145.710278287035": 1
+    "46145.712503703704": 1
+    "46145.72094622685": 1
+    "46145.72710046296": 1
+    "46145.73215292824": 1
+    "46145.733582291665": 1
+    "46145.744205069444": 1
+    "46145.75195196759": 1
+    "46145.75297515046": 1
+    "46207.42300012731": 1
+    "46207.43952487269": 1
+    "46207.460602824074": 1
+    "46207.478626979166": 1
+    "46207.49291530093": 1
+    "46228.452904861115": 1
+
+[2] "Quantas pessoas, incluindo você, moram na sua atual residência?"
+  Responses: 21/21 | Unique: 7
+    "2": 5
+    "4": 5
+    "5": 5
+    "1": 2
+    "3": 2
+    "6": 1
+    "8 ou mais": 1
+
+[3] "Qual a renda familiar mensal aproximadamente?"
+  Responses: 21/21 | Unique: 3
+    "Menos de 1 salário-mínimo (Menos de R$1.621)": 13
+    "Até 2 salários-mínimos (entre R$1.621 e R$ 3.242)": 7
+    "Até 4 salários-mínimos (entre R$4.863 e R$ 6.484)": 1
+
+[4] "A familia recebe algum benefício do governo?  (Marque todas as opções que se aplicam)   "
+  Responses: 20/21 | Unique: 8
+    "Não recebemos auxílio do governo": 8
+    "Bolsa Família, Tarifa Social de Energia": 3
+    "Bolsa Família, Auxílio Gás": 3
+    "Benefício de Prestação Continuada (BPC)": 2
+    "Bolsa Família, Auxílio Gás, Auxílio-doença, Tarifa Social de Energia": 1
+    "Bolsa Família, Benefício de Prestação Continuada (BPC)": 1
+    "Bolsa Família": 1
+    "Bolsa Família, Benefício de Prestação Continuada (BPC), Auxílio Gás, Tarifa Social de Energia": 1
+
+[5] "Quem é o principal provedor (a) financeiro (a) da casa hoje?"
+  Responses: 21/21 | Unique: 5
+    "Mãe": 12
+    "Avó/Avô": 4
+    "Pai": 3
+    "Eu mesmo": 1
+    "Esposo": 1
+
+[6] "Há idosos (60 anos ou mais) na sua moradia?  "
+  Responses: 21/21 | Unique: 2
+    "Não": 14
+    "Sim": 7
+
+[7] "Há pessoas com deficiência na sua moradia?"
+  Responses: 20/21 | Unique: 2
+    "Não": 15
+    "Sim": 5
+
+[8] "Atualmente, algum adolescente de até 17 anos que mora nesta residência, já passou pela experiência da maternidade/paternidade?"
+  Responses: 20/21 | Unique: 2
+    "Não": 17
+    "Sim": 3
+
+[9] "A mulher de referência da família é:"
+  Responses: 21/21 | Unique: 6
+    "Mãe": 12
+    "Avó": 5
+    "Esposa": 2
+    "Filha": 1
+    "Ela mesma": 1
+
+[10] "Idade da mulher de referência da casa  (mãe, avó, tia, madrinha, madrasta)"
+  Responses: 21/21 | Unique: 7
+    "60 anos ou mais": 5
+    "De 51 a 59 anos": 4
+    "De 36 a 40 anos": 3
+    "De 41 a 45 anos": 3
+    "De 46 a 50 anos": 3
+    "De 25 a 30 anos": 2
+    "De 31 a 35 anos": 1
+
+[11] "A mulher de referência é mãe?"
+  Responses: 21/21 | Unique: 2
+    "Sim": 17
+    "Não": 4
+
+[12] "A mulher de referência é mãe solo?
+(Cria os filhos sem a presença de um companheiro ou companheira)"
+  Responses: 21/21 | Unique: 2
+    "Sim": 13
+    "Não": 8
+
+[13] "Raça da mulher de referência da casa (mãe, avó, tia, madrinha, madrasta)"
+  Responses: 21/21 | Unique: 3
+    "Parda": 14
+    "Branca": 4
+    "Preta": 3
+
+[14] "Escolaridade da mulher de referência da casa (mãe, avó, tia, madrinha, madrasta)"
+  Responses: 21/21 | Unique: 6
+    "Ensino médio completo": 8
+    "Fundamental incompleto": 6
+    "Superior completo": 2
+    "Não alfabetizada": 2
+    "Fundamental completo": 2
+    "Técnico": 1
+
+[15] "Ocupação atual da mulher de referência da casa (mãe, avó, tia, madrinha, madrasta)"
+  Responses: 21/21 | Unique: 10
+    "Empregado doméstica": 5
+    "Empregado privado": 4
+    "Aposentada": 3
+    "Autônoma": 3
+    "Servidora pública": 1
+    "Microempreendedora": 1
+    "Desempregada": 1
+    "Autônoma, Empregado doméstica": 1
+    "Beneficiada do inss": 1
+    "Dona de casa": 1
+
+[16] "Há quanto tempo a mulher reside no endereço atual?"
+  Responses: 21/21 | Unique: 8
+    "Mais de 30 anos": 6
+    "Até 5 anos": 5
+    "Menos de 1 ano": 2
+    "Até 10 anos": 2
+    "Até 20 anos": 2
+    "Até 15 anos": 2
+    "Até 25 anos": 1
+    "Até 30 anos": 1
+
+[17] "O homem de referência da família é:"
+  Responses: 9/21 | Unique: 7
+    "Filho": 3
+    "Pai": 2
+    "Eu": 1
+    "Padrasto": 1
+    "Esposo": 1
+    "Avô": 1
+
+[18] "Idade do homem de referência da casa  (pai, avô, tio, padrinho, padrasto)"
+  Responses: 10/21 | Unique: 7
+    "De 25 a 30 anos": 2
+    "De 41 a 45 anos": 2
+    "De 31 a 35 anos": 2
+    "De 46 a 50 anos": 1
+    "De 18 a 24 anos": 1
+    "De 51 a 59 anos": 1
+    "60 anos ou mais": 1
+
+[19] "O homem de referência é pai?"
+  Responses: 10/21 | Unique: 2
+    "Sim": 7
+    "Não": 3
+
+[20] "O homem de referência é pai solo?
+(Cria os filhos sem a presença de um companheiro ou companheira)"
+  Responses: 10/21 | Unique: 1
+    "Não": 10
+
+[21] "Raça do homem de referência da casa  (pai, avô, tio, padrinho, padrasto)"
+  Responses: 10/21 | Unique: 3
+    "Parda": 7
+    "Preta": 2
+    "Branca": 1
+
+[22] "Escolaridade do homem de referência da casa  (pai, avô, tio, padrinho, padrasto)"
+  Responses: 10/21 | Unique: 5
+    "Ensino médio completo": 4
+    "Ensino médio incompleto": 3
+    "Não alfabetizado": 1
+    "Fundamental incompleto": 1
+    "Fundamental completo": 1
+
+[23] "Ocupação atual do homem de referência da casa  (pai, avô, tio, padrinho, padrasto)"
+  Responses: 10/21 | Unique: 4
+    "Autônomo": 5
+    "Aposentado": 2
+    "Empregado privado": 2
+    "Aposentado, Informal/bicos": 1
+
+[24] "Há quanto tempo o homem reside no endereço atual?"
+  Responses: 10/21 | Unique: 6
+    "Mais de 30 anos": 4
+    "Menos de 1 ano": 2
+    "Até 5 anos": 1
+    "Até 25 anos": 1
+    "Até 20 anos": 1
+    "Até 15 anos": 1
+
+[25] "Quantas crianças de 0 a 3 anos moram na sua casa?"
+  Responses: 5/21 | Unique: 2
+    "1": 3
+    "0": 2
+
+[26] "As crianças de 0 a 3 frequentam a creche?"
+  Responses: 4/21 | Unique: 2
+    "Sim": 2
+    "Não": 2
+
+[27] "Quantas crianças de 4 a 6 anos moram na sua casa?"
+  Responses: 6/21 | Unique: 2
+    "0": 5
+    "1": 1
+
+[28] "As crianças de 4 a 6 anos frequentam regulamente a escola?"
+  Responses: 3/21 | Unique: 2
+    "Não": 2
+    "Sim": 1
+
+[29] "Quantas crianças de 7 a 11 anos moram na sua casa?"
+  Responses: 9/21 | Unique: 3
+    "1": 5
+    "0": 3
+    "2": 1
+
+[30] "As crianças de 7 a 11 anos frequentam regulamente a escola?"
+  Responses: 7/21 | Unique: 2
+    "Sim": 6
+    "Não": 1
+
+[31] "Caso as crianças não estejam matriculadas, informe abaixo o motivo"
+  Responses: 1/21 | Unique: 1
+    "Ainda não tem idade escolar": 1
+
+[32] "Em qual rede escolar as crianças estudam?"
+  Responses: 9/21 | Unique: 1
+    "Escola pública": 9
+
+[33] "Em qual bairro a escola das crianças se localiza?"
+  Responses: 9/21 | Unique: 5
+    "Próximo ao bairro": 4
+    "Novo Angelim": 2
+    "Conjunto Angelim": 1
+    "Novo Angelim, Angelim Velho, Próximo ao bairro": 1
+    "Longe do bairro": 1
+
+[34] "Qual meio de locomoção da(s) criança(s) até a escola?"
+  Responses: 9/21 | Unique: 4
+    "A pé": 5
+    "A pé, Moto da família": 2
+    "Moto da família": 1
+    "Transporte escolar, Carro pago": 1
+
+[35] "Como foi o estudo da(s) criança(s) durante a pandemia?  "
+  Responses: 9/21 | Unique: 4
+    "Não estudava ainda": 3
+    "Estudou online": 3
+    "Não teve acesso à educação": 2
+    "Estudou parcialmente": 1
+
+[36] "Atualmente, a(s) criança(s) apresentam dificuldades na escola?  "
+  Responses: 7/21 | Unique: 2
+    "Não": 5
+    "Sim": 2
+
+[37] "Quais dificuldades a criança apresenta na escola? "
+  Responses: 4/21 | Unique: 4
+    "Escrita, Matemática, Dificuldade emocional": 1
+    "Leitura, Escrita, Atenção/concentração": 1
+    "Leitura, Escrita, Matemática, Atenção/concentração, Dificuldade emocional": 1
+    "Atenção/concentração, Dificuldade emocional, Ansiedade": 1
+
+[38] "As crianças tem acesso a atividades física (futebol, vôlei, basquete e outros) regulamente fora da escola?"
+  Responses: 9/21 | Unique: 2
+    "Não": 6
+    "Sim": 3
+
+[39] "As crianças tem acesso a atividades culturais? (Cinema, teatros, museus, bibliotecas e outros)"
+  Responses: 8/21 | Unique: 2
+    "Não": 5
+    "Sim": 3
+
+[40] "Quais espaços as crianças brincam atualmente?"
+  Responses: 9/21 | Unique: 8
+    "Em casa": 2
+    "No celular, Escola, Rua": 1
+    "No celular, Em casa, Escola, Rua, Casa de vizinhos": 1
+    "Rua, Praças": 1
+    "No celular, Em casa": 1
+    "Em casa, Escola, Rua, Praças": 1
+    "Em casa, Escola, Rua, Casa de vizinhos, Praças": 1
+    "Em casa, Rua": 1
+
+[41] "Se sim, qual tipo de deficiência a criança possui?"
+  Responses: 1/21 | Unique: 1
+    "Deficiência psíquica": 1
+
+[42] "Alguma das crianças possui transtornos diagnosticados? Quais?"
+  Responses: 2/21 | Unique: 2
+    "Transtorno do espectro autista (TEA), Transtornos alimentares": 1
+    "Investigando transtorno de ansiedade": 1
+
+[43] "As crianças recebem algum benefício do governo?  "
+  Responses: 8/21 | Unique: 2
+    "Sim": 5
+    "Não": 3
+
+[44] "Quais benefícios do governo a criança recebe? "
+  Responses: 7/21 | Unique: 3
+    "Bolsa Família": 5
+    "Bolsa Família, Benefício de Prestação Continuada (BPC)": 1
+    "Nenhuma possui beneficio do governo": 1
+
+[45] "Alguma das crianças realiza atualmente alguma atividade remunerada para ajudar na renda familiar?"
+  Responses: 9/21 | Unique: 1
+    "Não": 9
+
+[46] "Quantos adolescentes de 12 a 14 anos moram na sua casa?"
+  Responses: 10/21 | Unique: 2
+    "1": 7
+    "0": 3
+
+[47] "Os adolescentes de 12 a 14 anos frequentam regulamente a escola?"
+  Responses: 7/21 | Unique: 1
+    "Sim": 7
+
+[48] "Quantas adolescentes de 15 a 17 anos moram na sua casa?"
+  Responses: 8/21 | Unique: 3
+    "1": 6
+    "0": 1
+    "2": 1
+
+[49] "Os adolescentes de 15 a 17 anos frequentam regulamente a escola?"
+  Responses: 7/21 | Unique: 1
+    "Sim": 7
+
+[50] "Caso os adolescentes não estejam matriculados, informe abaixo o motivo"
+  Responses: 0/21 | Unique: 0
+
+[51] "Em qual rede escolar os adolescentes estudam?"
+  Responses: 10/21 | Unique: 1
+    "Escola pública": 10
+
+[52] "Em qual bairro a escola dos adolescentes se localiza?"
+  Responses: 10/21 | Unique: 5
+    "Novo Angelim": 6
+    "Conjunto Angelim": 1
+    "Angelim Velho": 1
+    "Longe do bairro": 1
+    "Novo Angelim, Próximo ao bairro": 1
+
+[53] "Qual meio de locomoção dos adolescentes até a escola?"
+  Responses: 10/21 | Unique: 1
+    "A pé": 10
+
+[54] "Como foi o estudo dos adolescentes durante a pandemia?  "
+  Responses: 8/21 | Unique: 1
+    "Estudou online": 8
+
+[55] "Atualmente, os adolescentes apresentam dificuldades na escola?  "
+  Responses: 9/21 | Unique: 2
+    "Não": 8
+    "Sim": 1
+
+[56] "Quais dificuldades os adolescentes apresentam na escola? "
+  Responses: 4/21 | Unique: 2
+    "Não apresentam dificuldades": 3
+    "Matemática": 1
+
+[57] "Os adolescentes têm acesso a atividades física (futebol, vôlei, basquete e outros) regulamente fora da escola?"
+  Responses: 10/21 | Unique: 2
+    "Sim": 6
+    "Não": 4
+
+[58] "Os adolescentes têm acesso a atividades culturais? (Cinema, teatros, museus, bibliotecas e outros)"
+  Responses: 10/21 | Unique: 2
+    "Não": 6
+    "Sim": 4
+
+[59] "Quais espaços os adolescentes brincam atualmente?"
+  Responses: 10/21 | Unique: 9
+    "No celular": 2
+    "No celular, Em casa, Escola": 1
+    "No celular, Em casa, Escola, Rua": 1
+    "No celular, Em casa, Escola, Casa de vizinhos, Praças, Parques": 1
+    "No celular, Em casa": 1
+    "No celular, Em casa, Rua, Casa de vizinhos, Igreja": 1
+    "Rua": 1
+    "Em casa, Rua": 1
+    "Não brincam com frequência": 1
+
+[60] "se sim, quais tipo de deficiência o  adolescente possui?"
+  Responses: 0/21 | Unique: 0
+
+[61] "se sim, Quais transtornos diagnósticado o adolescentes possui ?"
+  Responses: 2/21 | Unique: 1
+    "Transtorno de ansiedade": 2
+
+[62] "Os adolescentes recebem algum benefício do governo?  "
+  Responses: 9/21 | Unique: 2
+    "Sim": 8
+    "Não": 1
+
+[63] "Quais benefícios do governo o adolescente recebe? "
+  Responses: 9/21 | Unique: 5
+    "Pé-de-meia": 3
+    "Bolsa família": 3
+    "Bolsa Família": 1
+    "Nenhum possui beneficio do governo": 1
+    "Jovem Aprendiz": 1
+
+[64] "Algum dos adolescentes realiza atualmente alguma atividade remunerada para ajudar na renda familiar?"
+  Responses: 10/21 | Unique: 2
+    "Não": 9
+    "Sim": 1
+
+[65] "Gênero da pessoa responsável pela moradia/familia"
+  Responses: 21/21 | Unique: 2
+    "Mulher": 17
+    "Homem": 4
+
+[66] "Tipo de domicílio que sua família mora"
+  Responses: 21/21 | Unique: 2
+    "Casa em rua pública": 17
+    "Casa de vila ou condomínio": 4
+
+[67] "Tipo de propriedade de moradia atual da família"
+  Responses: 21/21 | Unique: 2
+    "Moradia Própria": 13
+    "Moradia Alugada": 8
+
+[68] "Quantidade de cômodos no total tem sua casa (sem contar banheiros)"
+  Responses: 21/21 | Unique: 4
+    "4 cômodos": 11
+    "3 cômodos": 7
+    "6 ou mais cômodos": 2
+    "5 cômodos": 1
+
+[69] "Quantidade de banheiros funcionais que existem na sua casa"
+  Responses: 21/21 | Unique: 3
+    "1 banheiro": 16
+    "2 banheiros": 4
+    "3 ou mais banheiros": 1
+
+[70] "A moradia da familia apresenta problemas estruturais?  "
+  Responses: 20/21 | Unique: 2
+    "Sim": 14
+    "Não": 6
+
+[71] "Quais são esses problemas estruturais da moradia?"
+  Responses: 19/21 | Unique: 13
+    "Telhado com goteira": 4
+    "Infiltração, Mofo, Rachaduras, Telhado com goteira": 3
+    "Infiltração, Mofo, Rachaduras, Telhado com goteira, Risco de desabamento, Falta de encanamento, Risco elétrico": 2
+    "Rachaduras, Telhado com goteira": 1
+    "Infiltração, Telhado com goteira": 1
+    "Nenhum problema estrutural, Infiltração, Mofo, Rachaduras, Telhado com goteira, Falta de encanamento, Risco elétrico": 1
+    "Infiltração, Mofo, Telhado com goteira, Risco elétrico": 1
+    "Mofo, Rachaduras, Telhado com goteira, Risco de desabamento, Falta de encanamento, Risco elétrico": 1
+    "Infiltração, Mofo": 1
+    "Telhado com goteira, Queda de árvore": 1
+    "Rachaduras, Telhado com goteira, Risco de desabamento": 1
+    "Infiltração, Mofo, Rachaduras, Telhado com goteira, Falta de encanamento": 1
+    "Nenhum problema estrutural": 1
+
+[72] "Sobre a água encanada da moradia "
+  Responses: 21/21 | Unique: 2
+    "A água encanada chega até dentro da moradia": 18
+    "Água encanada chega somente até o terreno": 3
+
+[73] "Qual é o tipo de abastecimento de água da sua casa?"
+  Responses: 21/21 | Unique: 2
+    "Rede geral de distribuição": 20
+    "Poço profundo ou artesiano": 1
+
+[74] "Com qual frequência falta água?  "
+  Responses: 21/21 | Unique: 3
+    "Às Vezes": 10
+    "Frequentemente": 8
+    "Nunca": 3
+
+[75] "O lixo é coletado regularmente pelo serviço de limpeza pública?  "
+  Responses: 20/21 | Unique: 2
+    "Sim": 17
+    "Não": 3
+
+[76] "Qual destino do lixo da moradia da família?"
+  Responses: 21/21 | Unique: 2
+    "Armazenado longe da moradia para acesso do serviço público de limpeza": 15
+    "Coletado na moradia pelo serviço público de limpeza": 6
+
+[77] "Qual tipo de esgotamento sanitário da moradia da família?"
+  Responses: 21/21 | Unique: 4
+    "Rio ou córrego": 13
+    "Fossa sépticas ligada a rede de esgoto": 6
+    "Fossa sépticas não ligada a rede de esgoto": 1
+    "Não possui esgotamento sanitário": 1
+
+[78] "Existe esgoto a céu aberto próximo a sua moradia?  "
+  Responses: 21/21 | Unique: 1
+    "Sim": 21
+
+[79] "Sua casa possui energia elétrica?"
+  Responses: 21/21 | Unique: 1
+    "Sim": 21
+
+[80] "Sua moradia é atingida por alagamentos e enchentes?  "
+  Responses: 21/21 | Unique: 2
+    "Sim": 19
+    "Não": 2
+
+[81] "As enchentes e/ou alagamentos já causaram prejuízos na sua moradia?"
+  Responses: 21/21 | Unique: 2
+    "Sim": 18
+    "Não": 3
+
+[82] "Com que frequência sua moradia é atingida por alagamentos ou enchentes? "
+  Responses: 21/21 | Unique: 3
+    "Apenas em chuvas fortes": 16
+    "Sempre que chove": 4
+    "Nunca entrou água": 1
+
+[83] "Quais prejuízos sua moradia já teve pelas fortes chuvas, alagamentos e enchentes?"
+  Responses: 20/21 | Unique: 17
+    "Perda de móveis, Perda de eletrodomésticos, Estourou encanamento de água, Danos em paredes, Perda de alimentos, Problemas no piso, Entrada de lama, Perda de documentos": 3
+    "Perda de móveis, Perda de eletrodomésticos, Entrada de lama, Perda de documentos": 2
+    "Perda de móveis, Perda de eletrodomésticos, Perda de alimentos, Queda de telhado, Queda de muro, Entrada de lama, Perda de documentos": 1
+    "Perda de móveis, Danos em paredes, Entrada de lama": 1
+    "Perda de móveis, Perda de eletrodomésticos, Estourou encanamento de água, Perda de alimentos, Problemas no piso, Perda de documentos, Roupas. Estorou o cano de esgoto": 1
+    "Perda de móveis, Estourou encanamento de água, Entrada de lama": 1
+    "Perda de móveis, Perda de eletrodomésticos, Danos em paredes, Perda de alimentos, Problemas no piso, Entrada de lama, Perda de documentos": 1
+    "Perda de móveis, Entrada de lama": 1
+    "Perda de móveis, Perda de eletrodomésticos, Estourou encanamento de água, Danos em paredes, Perda de alimentos, Queda de telhado, Queda de muro, Problemas no piso, Entrada de lama, Perda de documentos": 1
+    "Perda de móveis, Perda de eletrodomésticos, Estourou encanamento de água, Danos em paredes, Entrada de lama": 1
+    "Estourou encanamento de água, Queda de muro, Problemas no piso": 1
+    "Nunca teve prejuízo": 1
+    "Perda de móveis, Perda de alimentos, Entrada de lama, Perda de documentos, Roupas": 1
+    "Estourou encanamento de água, Problemas no piso, Entrada de lama": 1
+    "Danos em paredes, Entrada de lama": 1
+    "Danos em paredes, Problemas no piso": 1
+    "Perda de móveis, Estourou encanamento de água, Danos em paredes, Queda de telhado, Queda de muro, Problemas no piso, Entrada de lama": 1
+
+[84] "Quando ocorrem chuvas fortes, você percebe acúmulo de lixo trazido pela água? (de outras áreas ou bairros)  "
+  Responses: 21/21 | Unique: 2
+    "Sim": 20
+    "Não": 1
+
+[85] "Após chuvas fortes, aparecem animais peçonhentos, insetos e não domésticos na sua moradia ou nas proximidades?  "
+  Responses: 21/21 | Unique: 2
+    "Sim": 20
+    "Não": 1
+
+[86] "Quais tipos de animais? (pode marcar mais de uma opção):  "
+  Responses: 21/21 | Unique: 14
+    "Aranha, Cobras, Ratos, Baratas, Jacarés, Sapos": 3
+    "Aranha, Ratos, Baratas, Jacarés, Sapos, Insetos em grande quantidade": 3
+    "Aranha, Cobras, Ratos, Baratas, Jacarés, Sapos, Insetos em grande quantidade": 3
+    "Aranha, Ratos, Baratas, Jacarés, Sapos": 2
+    "Ratos, Baratas": 1
+    "Ratos, Baratas, Sapos": 1
+    "Aranha, Ratos, Baratas, Jacarés, Sapos, Morcegos": 1
+    "Cobras, Ratos, Jacarés, Sapos, Insetos em grande quantidade, Lacraia": 1
+    "Aranha, Ratos, Baratas, Jacarés, Insetos em grande quantidade": 1
+    "Aranha, Cobras, Ratos, Baratas, Jacarés, Sapos, Lacraia/ centopeia": 1
+    "Ratos, Baratas, Jacarés, Morcego": 1
+    "Aranha, Cobras, Ratos, Baratas, Jacarés, Sapos, Sentopeia": 1
+    "Escorpiões, Aranha, Ratos, Baratas, Jacarés, Sapos, Insetos em grande quantidade": 1
+    "Aranha, Cobras, Ratos, Baratas, Jacarés, Sapos, Tartaruga": 1
+
+[87] "As enchentes e/ou alagamentos já causaram prejuízos à sua familia? Quais?"
+  Responses: 20/21 | Unique: 20
+    "Gripe intensa, Problemas de pele e respiração, Impedimento para ir à escola, Impedimento para ir ao trabalho, Prejuízos financeiros, Estresse intenso": 1
+    "Prejuízos financeiros, Estresse intenso, Perda de água potável, Perda de energia elétrica": 1
+    "Gripe intensa, Impedimento para ir à escola, Impedimento para ir ao trabalho, Prejuízos financeiros, Estresse intenso": 1
+    "Nunca causaram prejuízos, Impedimento para ir à escola, Prejuízos financeiros, Estresse intenso, Perda de água potável": 1
+    "Impedimento para ir ao hospital, Impedimento para ir à escola, Impedimento para ir ao trabalho, Estresse intenso, Perda de água potável, Perda de energia elétrica": 1
+    "Gripe intensa, Acidentes, Impedimento para ir ao hospital, Impedimento para ir à escola, Impedimento para ir ao trabalho, Prejuízos financeiros, Estresse intenso, Perda de água potável, Perda de energia elétrica": 1
+    "Gripe intensa, Problemas de pele e respiração, Estresse intenso, Perda de água potável, Perda de energia elétrica": 1
+    "Gripe intensa, Acidentes, Impedimento para ir ao hospital, Impedimento para ir à escola, Impedimento para ir ao trabalho, Prejuízos financeiros, Estresse intenso, Perda de energia elétrica": 1
+    "Gripe intensa, Problemas de pele e respiração, Acidentes, Impedimento para ir ao hospital, Impedimento para ir à escola, Impedimento para ir ao trabalho, Prejuízos financeiros, Estresse intenso, Perda de água potável, Perda de energia elétrica": 1
+    "Gripe intensa, Impedimento para ir ao trabalho, Prejuízos financeiros, Estresse intenso, Perda de água potável, Perda de energia elétrica": 1
+    "Prejuízos financeiros, Estresse intenso, Impedimento de voltar para casa": 1
+    "Doenças infecciosas, Acidentes, Acidentes com animais, Impedimento para ir ao hospital, Impedimento para ir à escola, Impedimento para ir ao trabalho, Estresse intenso, Perda de água potável, Perda de energia elétrica": 1
+    "Acidentes, Prejuízos financeiros, Perda de energia elétrica": 1
+    "Impedimento para ir à escola, Impedimento para ir ao trabalho, Prejuízos financeiros, Estresse intenso": 1
+    "Gripe intensa, Acidentes, Impedimento para ir ao hospital, Impedimento para ir à escola, Impedimento para ir ao trabalho, Estresse intenso, Perda de energia elétrica": 1
+    "Gripe intensa, Problemas de pele e respiração, Impedimento para ir ao trabalho, Prejuízos financeiros, Estresse intenso, Perda de água potável, Perda de energia elétrica": 1
+    "Gripe intensa, Problemas de pele e respiração, Impedimento para ir ao hospital, Impedimento para ir à escola, Impedimento para ir ao trabalho, Estresse intenso, Perda de água potável, Perda de energia elétrica": 1
+    "Doenças infecciosas, Gripe intensa, Problemas de pele e respiração, Impedimento para ir ao hospital, Impedimento para ir à escola, Estresse intenso, Perda de água potável, Perda de energia elétrica": 1
+    "Gripe intensa, Problemas de pele e respiração, Acidentes, Impedimento para ir ao hospital, Impedimento para ir à escola, Impedimento para ir ao trabalho, Prejuízos financeiros, Estresse intenso, Perda de energia elétrica": 1
+    "Doenças infecciosas, Gripe intensa, Acidentes, Impedimento para ir ao hospital, Impedimento para ir ao trabalho, Estresse intenso, Perda de água potável, Perda de energia elétrica": 1
+
+[88] "Já houve casos de obito/falecimento de pessoas da na comunidade devido a enchente e alagamentos?"
+  Responses: 21/21 | Unique: 3
+    "Não": 10
+    "Sim": 10
+    "Não sei": 1
+
+[89] "Sua família é inscrita no Cadastro Único (CadÚnico)?  "
+  Responses: 21/21 | Unique: 3
+    "Sim": 14
+    "Não": 6
+    "Não sei": 1
+
+[90] "Conhece o CRAS ou CREAS que atende seu bairro? (Centro de Referência de Assistência Social) "
+  Responses: 21/21 | Unique: 2
+    "Sim": 17
+    "Não": 4
+
+[91] "Sua família utiliza ou já utilizou o CRAS/ CREAS?  "
+  Responses: 21/21 | Unique: 2
+    "Sim": 17
+    "Não": 4
+
+[92] "Há pessoas com doenças crônicas em sua moradia?  "
+  Responses: 20/21 | Unique: 2
+    "Não": 10
+    "Sim": 10
+
+[93] "Qual rede de saúde sua familia utiliza?"
+  Responses: 21/21 | Unique: 2
+    "Rede pública de saúde": 20
+    "Rede privada de saúde": 1
+
+[94] "Todos da sua família possui carteira do SUS?"
+  Responses: 21/21 | Unique: 1
+    "Sim": 21
+
+[95] "Quando precisam de atendimento, sua família consegue acessar algum serviço de saúde normalmente?"
+  Responses: 21/21 | Unique: 3
+    "Sempre": 10
+    "Às vezes": 10
+    "Nunca": 1
+
+[96] "Algum membro da sua família utiliza com frequência serviços de saúde?  "
+  Responses: 21/21 | Unique: 2
+    "Sim": 11
+    "Não": 10
+
+[97] "Você ou alguém da sua família já deixou de procurar atendimento de saúde mesmo precisando?  "
+  Responses: 21/21 | Unique: 2
+    "Sim": 15
+    "Não": 6
+
+[98] "Com que frequência você ou sua família utilizam serviços de saúde?  "
+  Responses: 21/21 | Unique: 3
+    "Às vezes (quando necessário)": 11
+    "Frequentemente (todo mês)": 6
+    "Raramente": 4
+
+[99] "Já houve situação de emergência em que não conseguiu atendimento de saúde?"
+  Responses: 21/21 | Unique: 2
+    "Não": 11
+    "Sim": 10
+
+[100] "Algum membro da família já teve doenças ligadas à água nos últimos 6 meses?  (leptospirose, diarreia, micoses e outros)"
+  Responses: 21/21 | Unique: 2
+    "Não": 13
+    "Sim": 8
+
+[101] "Quais doenças ligadas a água algum membro da sua família já teve nos ultimos 6 meses?"
+  Responses: 16/21 | Unique: 12
+    "Diarreia / infecção intestinal": 3
+    "Nenhum": 3
+    "Dengue, Diarreia / infecção intestinal": 1
+    "Dengue, Zika": 1
+    "Micose (problemas de pele causados por fungos), Dengue, Zika, Diarreia / infecção intestinal": 1
+    "Micose (problemas de pele causados por fungos), Diarreia / infecção intestinal": 1
+    "Micose (problemas de pele causados por fungos)": 1
+    "Micose (problemas de pele causados por fungos), Zika, Chikungunya, Diarreia / infecção intestinal, Infecção de pele (feridas, coceiras, alergias após contato com água)": 1
+    "Diarreia / infecção intestinal, Diarréia aguda": 1
+    "Picada de Insetos": 1
+    "Diarreia / infecção intestinal, Infecção de pele (feridas, coceiras, alergias após contato com água)": 1
+    "Micose (problemas de pele causados por fungos), Leptospirose, Dengue, Diarreia / infecção intestinal": 1
+
+[102] " Há acompanhamento psicológico na família?"
+  Responses: 20/21 | Unique: 2
+    "Não": 18
+    "Sim": 2
+
+[103] "O que mais preocupa sua família hoje em relação a saúde?  "
+  Responses: 21/21 | Unique: 18
+    "Falta de atendimento médico quando preciso, Demora para conseguir consulta ou exame, Falta de medicamentos, Doenças na família, Problemas de saúde mental (ansiedade, depressão, estresse), Dificuldade de acesso ao posto de saúde ou hospital, Falta de dinheiro para cuidar da saúde, Doenças relacionadas ao ambiente (água, lixo, esgoto), Alimentação inadequada": 3
+    "Falta de atendimento médico quando preciso, Demora para conseguir consulta ou exame, Falta de medicamentos, Dificuldade de acesso ao posto de saúde ou hospital, Falta de dinheiro para cuidar da saúde": 2
+    "Falta de atendimento médico quando preciso": 1
+    "Demora para conseguir consulta ou exame": 1
+    "Problemas de saúde mental (ansiedade, depressão, estresse), Falta de dinheiro para cuidar da saúde, Doenças relacionadas ao ambiente (água, lixo, esgoto), Alimentação inadequada": 1
+    "Sem preocupações em relaçao a saúde": 1
+    "Demora para conseguir consulta ou exame, Falta de medicamentos, Doenças na família, Doenças relacionadas ao ambiente (água, lixo, esgoto), Alimentação inadequada": 1
+    "Falta de atendimento médico quando preciso, Demora para conseguir consulta ou exame, Falta de medicamentos, Problemas de saúde mental (ansiedade, depressão, estresse), Dificuldade de acesso ao posto de saúde ou hospital, Falta de dinheiro para cuidar da saúde, Doenças relacionadas ao ambiente (água, lixo, esgoto)": 1
+    "Falta de atendimento médico quando preciso, Demora para conseguir consulta ou exame, Falta de medicamentos, Doenças na família, Problemas de saúde mental (ansiedade, depressão, estresse), Falta de dinheiro para cuidar da saúde, Doenças relacionadas ao ambiente (água, lixo, esgoto), Alimentação inadequada": 1
+    "Falta de atendimento médico quando preciso, Demora para conseguir consulta ou exame, Problemas de saúde mental (ansiedade, depressão, estresse), Dificuldade de acesso ao posto de saúde ou hospital, Falta de dinheiro para cuidar da saúde, Doenças relacionadas ao ambiente (água, lixo, esgoto), Alimentação inadequada": 1
+    "Demora para conseguir consulta ou exame, Doenças na família, Problemas de saúde mental (ansiedade, depressão, estresse), Falta de dinheiro para cuidar da saúde, Adoecer a noite eficar muito mal e não poder sair por conta da ponte": 1
+    "Doenças na família, Falta de dinheiro para cuidar da saúde": 1
+    "Demora para conseguir consulta ou exame, Falta de dinheiro para cuidar da saúde, Alimentação inadequada": 1
+    "Falta de atendimento médico quando preciso, Demora para conseguir consulta ou exame, Falta de medicamentos, Doenças na família, Falta de dinheiro para cuidar da saúde": 1
+    "Falta de atendimento médico quando preciso, Demora para conseguir consulta ou exame, Falta de medicamentos, Falta de dinheiro para cuidar da saúde, Doenças relacionadas ao ambiente (água, lixo, esgoto), Alimentação inadequada": 1
+    "Falta de atendimento médico quando preciso, Demora para conseguir consulta ou exame, Doenças na família, Problemas de saúde mental (ansiedade, depressão, estresse), Falta de dinheiro para cuidar da saúde, Doenças relacionadas ao ambiente (água, lixo, esgoto)": 1
+    "Falta de atendimento médico quando preciso, Demora para conseguir consulta ou exame, Falta de medicamentos, Dificuldade de acesso ao posto de saúde ou hospital, Falta de dinheiro para cuidar da saúde, Doenças relacionadas ao ambiente (água, lixo, esgoto), Alimentação inadequada": 1
+    "Falta de atendimento médico quando preciso, Demora para conseguir consulta ou exame, Falta de medicamentos, Problemas de saúde mental (ansiedade, depressão, estresse), Falta de dinheiro para cuidar da saúde, Doenças relacionadas ao ambiente (água, lixo, esgoto)": 1
+
+[104] "Na sua casa possui acesso à internet?  "
+  Responses: 20/21 | Unique: 2
+    "Sim": 18
+    "Não": 2
+
+[105] "Quais formas de acesso a internet na sua casa?"
+  Responses: 21/21 | Unique: 7
+    "Wi-Fi próprio (internet contratada em casa)": 14
+    "Dados móveis (internet do celular)": 2
+    "Dados móveis (internet do celular), Wi-Fi próprio (internet contratada em casa), Wi-Fi público (praças, escolas, etc.)": 1
+    "Dados móveis (internet do celular), Wi-Fi próprio (internet contratada em casa), Wi-Fi de vizinho/amigo": 1
+    "Dados móveis (internet do celular), Wi-Fi próprio (internet contratada em casa)": 1
+    "Dados móveis (internet do celular), Wi-Fi de vizinho/amigo": 1
+    "Wi-Fi de vizinho/amigo": 1
+
+[106] "O que deveria melhorar na educação dos estudantes da sua casa?"
+  Responses: 15/21 | Unique: 13
+    "Qualidade do ensino nas escolas, Presença e apoio dos professores, Estrutura das escolas (salas, banheiros, materiais), Segurança nas escolas, Acesso à escola (transporte, vagas), Acompanhamento escolar (reforço, apoio pedagógico), Acesso à internet e tecnologia para estudo, Atividades no contraturno (esporte, cultura, projetos), Participação da família na educação, Inclusão de crianças com dificuldades ou deficiência": 2
+    "Não precisa melhorar, a educação está execelente": 2
+    "Acesso à escola (transporte, vagas)": 1
+    "Qualidade do ensino nas escolas, Presença e apoio dos professores, Acesso à escola (transporte, vagas), Acompanhamento escolar (reforço, apoio pedagógico), Atividades no contraturno (esporte, cultura, projetos), Inclusão de crianças com dificuldades ou deficiência": 1
+    "Estrutura das escolas (salas, banheiros, materiais), Segurança nas escolas, Acesso à escola (transporte, vagas), Acompanhamento escolar (reforço, apoio pedagógico), Acesso à internet e tecnologia para estudo, Atividades no contraturno (esporte, cultura, projetos), Participação da família na educação, Inclusão de crianças com dificuldades ou deficiência": 1
+    "Segurança nas escolas, Acesso à escola (transporte, vagas), Acompanhamento escolar (reforço, apoio pedagógico), Atividades no contraturno (esporte, cultura, projetos), Participação da família na educação, Inclusão de crianças com dificuldades ou deficiência": 1
+    "Acompanhamento escolar (reforço, apoio pedagógico)": 1
+    "Qualidade do ensino nas escolas, Estrutura das escolas (salas, banheiros, materiais), Segurança nas escolas, Acesso à escola (transporte, vagas), Acompanhamento escolar (reforço, apoio pedagógico), Atividades no contraturno (esporte, cultura, projetos), Participação da família na educação, Inclusão de crianças com dificuldades ou deficiência": 1
+    "Qualidade do ensino nas escolas, Acompanhamento escolar (reforço, apoio pedagógico), Inclusão de crianças com dificuldades ou deficiência": 1
+    "Atividades no contraturno (esporte, cultura, projetos), Inclusão de crianças com dificuldades ou deficiência": 1
+    "Estrutura das escolas (salas, banheiros, materiais), Segurança nas escolas, Inclusão de crianças com dificuldades ou deficiência": 1
+    "Qualidade do ensino nas escolas, Inclusão de crianças com dificuldades ou deficiência": 1
+    "Segurança nas escolas, Acompanhamento escolar (reforço, apoio pedagógico)": 1
+
+[107] "Como você avalia o acesso à educação da sua família?"
+  Responses: 16/21 | Unique: 3
+    "Boa": 11
+    "Regular": 4
+    "Muito boa": 1
+
+[108] "Você e sua família conhecem serviços ou instituições que ajudam em situações de risco?  "
+  Responses: 20/21 | Unique: 2
+    "Sim": 11
+    "Não": 9
+
+[109] " Em alguma situação de risco, você e sua família já procurou algum serviço público?  "
+  Responses: 21/21 | Unique: 2
+    "Não": 14
+    "Sim": 7
+
+[110] "Se sim, quais serviços você e sua família já utilizaram?  "
+  Responses: 16/21 | Unique: 12
+    "Nunca utilizamos esses serviços": 3
+    "SAMU (atendimento de urgência)": 2
+    "Defesa Civil": 2
+    "Defensoria Pública": 1
+    "Defensoria Pública, Defesa Civil": 1
+    "Polícia Militar, Conselho Tutelar, Delegacia da Mulher, Delegacia do Idoso, Defensoria Pública, Ministério Público, Polícia Civil": 1
+    "Delegacia da Mulher": 1
+    "Polícia Militar, Conselho Tutelar, Defensoria Pública, Ministério Público, SAMU (atendimento de urgência)": 1
+    "Defensoria Pública, Ministério Público, Defesa Civil, SAMU (atendimento de urgência)": 1
+    "Polícia Militar": 1
+    "Polícia Militar, Defensoria Pública": 1
+    "Defensoria Pública, Corpo de Bombeiros, SAMU (atendimento de urgência)": 1
+
+[111] "Quando você e sua família procuraram esses serviços, houve retorno/atendimento?  "
+  Responses: 14/21 | Unique: 4
+    "Sim, fui atendido(a)": 9
+    "Prefere não responder": 2
+    "Não fui atendido(a)": 2
+    "Atendimento parcial": 1
+
+[112] "Sua família consegue receber encomendas (correios, compras online, entregas) diretamente na sua casa?  "
+  Responses: 21/21 | Unique: 2
+    "Sim": 14
+    "Não": 7
+
+[113] "Se não, como você costuma receber suas encomendas?"
+  Responses: 16/21 | Unique: 5
+    "Recebo em casa mesmo": 10
+    "Entrega na casa de vizinho ou familiar": 3
+    "Entrega na casa de vizinho ou familiar, A entrega não chega na região": 1
+    "A entrega não chega na região": 1
+    "Recebo em casa mesmo, Entrega na casa de vizinho ou familiar": 1
+
+[114] "Seu bairro possui transporte publico? (Ônibus)"
+  Responses: 20/21 | Unique: 2
+    "Sim": 16
+    "Não": 4
+
+[115] "Como você avalia o transporte público do seu bairro?"
+  Responses: 18/21 | Unique: 2
+    "Ruim": 12
+    "Regular": 6
+
+[116] "Nos últimos 3 meses, houve momento em que faltou comida na sua casa?  "
+  Responses: 21/21 | Unique: 2
+    "Não": 13
+    "Sim": 8
+
+[117] "Com que frequência isso aconteceu ou acontece de faltar comida da sua casa?  "
+  Responses: 20/21 | Unique: 4
+    "Nunca faltou comida": 12
+    "Às vezes": 4
+    "Frequentemente": 3
+    "Uma vez": 1
+
+[118] "Você recebe algum tipo de ajuda alimentar? (benefício, cesta básica, doação, etc.)"
+  Responses: 21/21 | Unique: 3
+    "Não": 9
+    "Às vezes": 7
+    "Sim": 5
+
+[119] "A família costuma fazer quantas alimentações no dia?"
+  Responses: 21/21 | Unique: 5
+    "3": 8
+    "4": 5
+    "2": 4
+    "5": 3
+    "6": 1
+
+[120] "Sua família já passou por alguma dessas situações? (marque as que se aplicam)  "
+  Responses: 20/21 | Unique: 14
+    "Nenhuma das situações": 3
+    "Desemprego recente, Falta de moradia adequada": 3
+    "Desemprego recente": 2
+    "Doença grave na família": 2
+    "Desemprego recente, Falta de moradia adequada, Falta de acesso à alimentação, Violência": 1
+    "Falta de moradia adequada, Doença grave na família": 1
+    "Desemprego recente, Falta de moradia adequada, Doença grave na família": 1
+    "Desemprego recente, Doença grave na família, Falta de acesso à alimentação, Violência": 1
+    "Falta de acesso à alimentação": 1
+    "Falta de moradia adequada, Doença grave na família, Falta de acesso à alimentação, Violência": 1
+    "Doença grave na família, Falta de acesso à alimentação": 1
+    "Desemprego recente, Falta de acesso à alimentação": 1
+    "Desemprego recente, Doença grave na família": 1
+    "Desemprego recente, Falta de moradia adequada, Doença grave na família, Falta de acesso à alimentação": 1
+
+[121] "Você se sente seguro(a) onde mora?"
+  Responses: 20/21 | Unique: 2
+    "Sim": 13
+    "Não": 7
+
+[122] "Há áreas de risco próximas (rio, mangue, encosta)?"
+  Responses: 21/21 | Unique: 1
+    "Sim": 21
+
+[123] "Alguém da família já passou por situação de violência (verbal, física, moral e outras)?"
+  Responses: 19/21 | Unique: 2
+    "Não": 10
+    "Sim": 9
+
+[124] "Algum adulto da casa não sabe ler ou escrever?"
+  Responses: 20/21 | Unique: 2
+    "Não": 15
+    "Sim": 5
+
+[125] "Existem locais da comunidade que você evita?  "
+  Responses: 21/21 | Unique: 2
+    "Não": 15
+    "Sim": 6
+
+[126] "As crianças e adolescentes podem brincar na rua com segurança?  "
+  Responses: 16/21 | Unique: 3
+    "As vezes": 6
+    "Sim": 6
+    "Não": 4
+
+[127] "A rua da comunidade é pavimentada?"
+  Responses: 21/21 | Unique: 2
+    "Não": 20
+    "Sim": 1
+
+[128] "Quais são os principais problemas do bairro?  "
+  Responses: 21/21 | Unique: 14
+    "Alagamento, Lixo acumulado, Falta de água, Falta de energia, Falta de serviços públicos, Ruas sem pavimentação": 5
+    "Alagamento, Lixo acumulado, Falta de água, Falta de energia, Violência, Falta de serviços públicos, Ruas sem pavimentação": 2
+    "Alagamento, Lixo acumulado, Falta de água, Falta de serviços públicos, Ruas sem pavimentação": 2
+    "Alagamento, Falta de serviços públicos, Ruas sem pavimentação": 2
+    "Alagamento, Lixo acumulado, Falta de água, Falta de serviços públicos, Ruas sem pavimentação, Saneamento básico": 1
+    "Alagamento, Lixo acumulado, Violência, Falta de serviços públicos, Ruas sem pavimentação": 1
+    "Alagamento, Lixo acumulado, Falta de energia, Falta de serviços públicos, Ruas sem pavimentação, A Ponte caiu.": 1
+    "Alagamento, Lixo acumulado, Falta de serviços públicos, Ruas sem pavimentação, Saneamento básico": 1
+    "Alagamento, Falta de água, Violência, Falta de serviços públicos, Ruas sem pavimentação": 1
+    "Alagamento, Lixo acumulado, Falta de água, Falta de serviços públicos, Ruas sem pavimentação, Queda de árvore": 1
+    "Alagamento, Lixo acumulado, Falta de serviços públicos": 1
+    "Alagamento, Lixo acumulado, Falta de água, Ruas sem pavimentação": 1
+    "Alagamento, Falta de água, Falta de serviços públicos, Ruas sem pavimentação": 1
+    "Alagamento, Falta de energia, Violência, Falta de serviços públicos, Ruas sem pavimentação": 1
+
+[129] "Você ou sua família já ouviram ou leram comentários preconceituosos ou maldosos sobre o local que moram?"
+  Responses: 21/21 | Unique: 2
+    "Sim": 19
+    "Não": 2
+
+[130] "
+O que mais ajudaria a melhorar a vida da sua família?"
+  Responses: 0/21 | Unique: 0
+
+[131] "Você conhece o INSTITUTO ÁDAPO?  "
+  Responses: 21/21 | Unique: 2
+    "Sim": 17
+    "Não": 4
+
+[132] "Como você conheceu o INSTITUTO ÁDAPO?  "
+  Responses: 19/21 | Unique: 6
+    "Eventos no bairro": 7
+    "Através dos membros do Instituto Ádapo": 6
+    "Não conhecia": 2
+    "Amigos/vizinhos": 2
+    "Através da Família/ Filhas": 1
+    "Através de membros": 1
+
+[133] "Você sabe quais atividades o INSTITUTO ÁDAPO realiza?  "
+  Responses: 20/21 | Unique: 2
+    "Sim": 16
+    "Não": 4
+
+[134] "Você ou alguém da sua família já participou de alguma atividade?  "
+  Responses: 20/21 | Unique: 2
+    "Sim": 16
+    "Não": 4
+
+[135] "Quem da sua família participa das atividades do INSTITUTO ÁDAPO?  "
+  Responses: 17/21 | Unique: 9
+    "Crianças": 4
+    "Adultos": 3
+    "Crianças, Adolescentes": 2
+    "Crianças, Adultos": 2
+    "Adolescentes": 2
+    "Idosos": 1
+    "Adultos, Idosos": 1
+    "Crianças, Adultos, Idosos": 1
+    "Ninguém participa": 1
+
+[136] "Como você avalia as atividades do ÁDAPO?  "
+  Responses: 19/21 | Unique: 2
+    "Excelente": 15
+    "Boa": 4
+
+[137] "Quais tipos de atividade você gostaria que o INSTITUTO ÁDAPO oferecesse? "
+  Responses: 19/21 | Unique: 9
+    "Cursos profissionalizantes, Atividades esportivas, Atividades culturais, Educação ambiental, Apoio psicológico, Distribuição de alimentos": 10
+    "Atividades esportivas, Atividades culturais, Educação ambiental, Apoio psicológico, Distribuição de alimentos": 2
+    "Apoio psicológico, Distribuição de alimentos": 1
+    "Atividades esportivas, Apoio psicológico, Distribuição de alimentos": 1
+    "Cursos profissionalizantes, Apoio psicológico, Distribuição de alimentos": 1
+    "Cursos profissionalizantes, Atividades esportivas, Educação ambiental, Apoio psicológico, Distribuição de alimentos": 1
+    "Distribuição de alimentos": 1
+    "Cursos profissionalizantes": 1
+    "Cursos profissionalizantes, Apoio psicológico": 1
+
+[138] "Você teria alguma sugestão ou conselho para a melhoria das atividades do INSTITUTO ÁDAPO na sua comunidade?  "
+  Responses: 10/21 | Unique: 10
+    "Tá bom demais": 1
+    "Continuar": 1
+    "Que pelo menos arrumasse menos a rua. Ja pensou a gente doente aqui? Vamo morrer, até porque eu sou o pai e a mãe da casa. A rua estando arrumada era muito bom, ja moro 32 anos aqui e essa rua aqui la no projeto nao sei onde ja ta arrumada.": 1
+    "Atividades pra crianças": 1
+    "Atividade voltada para crianças dentro do expectro, concientizar sobre o preconceito com crianças do expectro.": 1
+    "Sim, para as crianças, melhoria para o bairro em estrutura": 1
+    "Não tenho nada o que falar não": 1
+    "Criar uma modalidade esportiva.": 1
+    "Agradecimento ao Ádapo que continue dando reconhecimento pra comunidade ou pras crianças": 1
+    "Que pudéssemos andar sem se preocupar com a água": 1
+
+[139] "Alguma das crianças possui algum tipo de deficiência?"
+  Responses: 8/21 | Unique: 2
+    "Não": 7
+    "Sim": 1
+
+[140] "Alguma das crianças possui algum tipo de transtorno?"
+  Responses: 9/21 | Unique: 2
+    "Não": 8
+    "Sim": 1
+
+[141] "Algum adolescente possui algum tipo de transtorno?"
+  Responses: 9/21 | Unique: 2
+    "Não": 8
+    "Sim": 1
+
+[142] "Algum dos adolescentes possui algum tipo de deficiência?"
+  Responses: 9/21 | Unique: 1
+    "Não": 9
+
+[143] "Com que frequência sua familia consome frutas, legumes, verduras e hortaliças?"
+  Responses: 21/21 | Unique: 2
+    "As vezes": 16
+    "Sempre": 5

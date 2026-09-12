@@ -1,0 +1,291 @@
+/* ================================================
+   SECTIONS — Slide Views Specific Styles
+   Diagnóstico Socioterritorial da Vila Sapo
+   Institutional Light Design System
+   Zero Emojis, No Purple, 100vh Viewport Integration
+   ================================================ */
+
+/* ---------- SLIDE 1: Capa / Hero ---------- */
+#slide-capa {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slide-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-xl) var(--space-3xl);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero-top-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-default);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.hero-dossier-code {
+  color: var(--brand-orange);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.hero-location-tag {
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.hero-header-block {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.hero-logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.hero-status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--brand-orange-subtle);
+  border: 1px solid rgba(232, 108, 29, 0.3);
+  color: var(--brand-orange-dark);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.hero-title-main {
+  font-size: clamp(2rem, 3.8vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  margin: 0 0 var(--space-xs) 0;
+  text-transform: uppercase;
+}
+
+.hero-title-main span {
+  color: var(--brand-orange);
+}
+
+.hero-description-lead {
+  font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+  color: var(--text-secondary);
+  max-width: 820px;
+  line-height: 1.5;
+  margin: 0 0 var(--space-lg) 0;
+}
+
+.hero-macro-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.hero-macro-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.hero-macro-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-macro-card.critical {
+  border-left: 4px solid var(--critical);
+}
+
+.hero-macro-card.brand {
+  border-left: 4px solid var(--brand-orange);
+}
+
+.hero-macro-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.hero-macro-val {
+  font-family: var(--font-mono);
+  font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+.hero-macro-card.critical .hero-macro-val {
+  color: var(--critical);
+}
+
+.hero-macro-card.brand .hero-macro-val {
+  color: var(--brand-orange);
+}
+
+.hero-macro-sub {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.hero-bottom-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.btn-hero-start {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  border-radius: var(--radius-md);
+  background: var(--brand-orange);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px -4px rgba(232, 108, 29, 0.4);
+  transition: all var(--transition-fast);
+}
+
+.btn-hero-start:hover {
+  background: var(--brand-orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -4px rgba(232, 108, 29, 0.5);
+}
+
+.hero-source-note {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-source-note .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--success);
+}
+
+/* ---------- SLIDE 2: Diagnóstico Multitemático ---------- */
+#slide-diagnostico .slide-container {
+  height: 100%;
+}
+
+.diag-summary-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  flex-shrink: 0;
+}
+
+.diag-strip-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.diag-strip-text {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.diag-strip-num {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--brand-orange);
+}
+
+/* ---------- SLIDE 3: ODS ONU ---------- */
+#slide-ods .slide-container {
+  height: 100%;
+}
+
+/* ---------- SLIDE 4: Cartografia Social ---------- */
+#slide-mapa .slide-container {
+  height: 100%;
+}
+
+/* ---------- SLIDE 5: Depoimentos & Áudio ---------- */
+#slide-depoimentos .slide-container {
+  height: 100%;
+}
+
+/* ---------- SLIDE 6: Na Mídia ---------- */
+#slide-midia .slide-container {
+  height: 100%;
+}
+
+/* ---------- SLIDE 7: Instituto Ádapo ---------- */
+#slide-adapo .slide-container {
+  height: 100%;
+}
+
+.adapo-contact-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-sm);
+  font-size: 12px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.adapo-contact-link {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--brand-orange);
+  text-decoration: none;
+}

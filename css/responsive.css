@@ -1,0 +1,109 @@
+/* ================================================
+   RESPONSIVE — Presentation Deck Adaptations
+   Diagnóstico Socioterritorial da Vila Sapo
+   Instituto Ádapo // Light Mode Presentation Deck
+   Zero Emojis, No Purple
+   ================================================ */
+
+/* Tablet (max-width: 1100px) */
+@media (max-width: 1100px) {
+  .hero-macro-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ods-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .map-layout-deck {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  .map-side-panel {
+    max-height: 280px;
+  }
+
+  .testimonials-deck-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid-scroll {
+    grid-template-columns: 1fr;
+    max-height: 260px;
+  }
+
+  .media-deck-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adapo-deck-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 52px;
+  }
+
+  html, body {
+    overflow-y: auto; /* Allow smooth scroll on very small screens if needed */
+  }
+
+  .slide-view {
+    padding: var(--space-md);
+  }
+
+  .hero-slide-inner {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .hero-title-main {
+    font-size: 1.8rem;
+  }
+
+  .hero-macro-stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .ods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .diag-strip-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .float-nav-btn {
+    bottom: 16px;
+    padding: 10px 16px;
+    font-size: 11px;
+  }
+
+  .float-nav-btn.next {
+    right: 16px;
+  }
+
+  .float-nav-btn.prev {
+    left: 16px;
+  }
+
+  .chart-wrapper {
+    height: 180px;
+  }
+}

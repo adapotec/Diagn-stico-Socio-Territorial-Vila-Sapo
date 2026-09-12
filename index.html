@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diagnóstico Socioterritorial da Vila Sapo — Instituto Ádapo</title>
+  <meta name="description" content="Apresentação institucional do Diagnóstico Socioterritorial da Vila Sapo (Novo Angelim, São Luís - MA). Dados censitários de habitabilidade, saneamento, saúde, direitos e cartografia social." />
+  <meta name="keywords" content="Vila Sapo, Novo Angelim, São Luís, Maranhão, Instituto Ádapo, diagnóstico socioterritorial, saneamento, alagamento, ODS ONU" />
+  <meta property="og:title" content="Diagnóstico Socioterritorial — Vila Sapo | Instituto Ádapo" />
+  <meta property="og:description" content="Apresentação interativa com dados censitários sobre as 21 famílias da Vila Sapo." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/logo/logo-favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <script type="module" src="/js/main.js"></script>
+</head>
+<body>
+
+  <!-- ==================== 1. TOP INSTITUTIONAL NAVIGATION ==================== -->
+  <header class="main-nav" role="banner">
+    <div class="nav-container">
+      <a href="#slide-capa" class="nav-brand" data-slide="0" aria-label="Ir para o início">
+        <img src="/logo/logo-preta-sem-fundo.png" alt="Instituto Ádapo" />
+        <span class="nav-brand-text">DIAGNÓSTICO VILA SAPO</span>
+      </a>
+
+      <!-- Horizontal Deck Navigation Links -->
+      <nav role="navigation" aria-label="Navegação da apresentação">
+        <ul class="nav-deck-links">
+          <li>
+            <a href="#slide-capa" class="nav-deck-link active" data-slide="0">
+              <span class="nav-deck-idx">01</span> Capa
+            </a>
+          </li>
+          <li>
+            <a href="#slide-diagnostico" class="nav-deck-link" data-slide="1">
+              <span class="nav-deck-idx">02</span> Diagnóstico
+            </a>
+          </li>
+          <li>
+            <a href="#slide-ods" class="nav-deck-link" data-slide="2">
+              <span class="nav-deck-idx">03</span> ODS ONU
+            </a>
+          </li>
+          <li>
+            <a href="#slide-mapa" class="nav-deck-link" data-slide="3">
+              <span class="nav-deck-idx">04</span> Cartografia
+            </a>
+          </li>
+          <li>
+            <a href="#slide-depoimentos" class="nav-deck-link" data-slide="4">
+              <span class="nav-deck-idx">05</span> Depoimentos
+            </a>
+          </li>
+          <li>
+            <a href="#slide-midia" class="nav-deck-link" data-slide="5">
+              <span class="nav-deck-idx">06</span> Na Mídia
+            </a>
+          </li>
+          <li>
+            <a href="#slide-adapo" class="nav-deck-link" data-slide="6">
+              <span class="nav-deck-idx">07</span> Instituto Ádapo
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-meta-right">
+        <span class="deck-slide-indicator">1 / 7</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Top Progress Bar -->
+  <div class="deck-progress-bar" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100">
+    <div class="deck-progress-bar-fill"></div>
+  </div>
+
+  <!-- ==================== FLOATING NAVIGATION BUTTONS ==================== -->
+  <button class="float-nav-btn prev hidden" aria-label="Voltar para slide anterior">
+    <span>←</span>
+    <span class="btn-label">Anterior</span>
+  </button>
+
+  <button class="float-nav-btn next" aria-label="Avançar para o próximo slide">
+    <span class="btn-label">Diagnóstico →</span>
+  </button>
+
+  <!-- ==================== MAIN PRESENTATION DECK ==================== -->
+  <main class="presentation-deck" role="main">
+
+    <!-- ==================== SLIDE 1: CAPA / HERO ==================== -->
+    <section id="slide-capa" class="slide-view active" aria-labelledby="hero-title">
+      <!-- Dynamic Photo Carousel Background -->
+      <div class="hero-bg-carousel">
+        <div id="hero-carousel-track"></div>
+        <div class="hero-bg-overlay"></div>
+      </div>
+
+      <div class="hero-slide-inner">
+        <div class="hero-top-badge-row">
+          <span class="hero-dossier-code">DOSSIÊ TERRITORIAL // REG-VS/2026</span>
+          <span class="hero-location-tag">BACIA DO RIO INGAÚRA • NOVO ANGELIM • SÃO LUÍS - MA</span>
+        </div>
+
+        <div class="hero-header-block">
+          <img src="/logo/logo-preta-sem-fundo.png" alt="Instituto Ádapo" class="hero-logo-img" />
+          <div class="hero-status-tag">
+            <span>RELATÓRIO CENSITÁRIO DE EMERGÊNCIA</span>
+          </div>
+        </div>
+
+        <h1 id="hero-title" class="hero-title-main">
+          DIAGNÓSTICO SOCIOTERRITORIAL<br />
+          <span>VILA SAPO</span>
+        </h1>
+
+        <p class="hero-description-lead">
+          Levantamento das condições de habitabilidade, violação crônica do direito ao saneamento básico e risco de inundações das <strong>21 famílias mapeadas à margem do Rio Ingaúra</strong>. Pesquisa censitária realizada pelo <strong>Instituto Ádapo</strong>.
+        </p>
+
+        <!-- Macro Indicators -->
+        <div class="hero-macro-stats">
+          <div class="hero-macro-card brand">
+            <span class="hero-macro-label">AMOSTRA CENSITÁRIA</span>
+            <span class="hero-macro-val" data-counter data-target="21">0</span>
+            <span class="hero-macro-sub">Famílias Mapeadas (100% Censo)</span>
+          </div>
+
+          <div class="hero-macro-card">
+            <span class="hero-macro-label">DADOS DE CAMPO</span>
+            <span class="hero-macro-val" data-counter data-target="143">0</span>
+            <span class="hero-macro-sub">Indicadores de Vulnerabilidade</span>
+          </div>
+
+          <div class="hero-macro-card critical">
+            <span class="hero-macro-label">ESGOTO A CÉU ABERTO</span>
+            <span class="hero-macro-val" data-counter data-target="100" data-suffix="%">0</span>
+            <span class="hero-macro-sub">Descarte Direto na Margem do Rio</span>
+          </div>
+
+          <div class="hero-macro-card critical">
+            <span class="hero-macro-label">ENCHENTES PERIÓDICAS</span>
+            <span class="hero-macro-val" data-counter data-target="90" data-suffix="%">0</span>
+            <span class="hero-macro-sub">Casas Atingidas por Inundações</span>
+          </div>
+        </div>
+
+        <!-- Carousel Dots & Actions -->
+        <div class="hero-bottom-actions">
+          <button id="hero-start-cta" class="btn-hero-start">
+            INICIAR APRESENTAÇÃO <span>→</span>
+          </button>
+
+          <div class="hero-source-note">
+            <span class="dot"></span>
+            <span id="data-source-text">Censo consolidado — 21 famílias entrevistadas</span>
+          </div>
+
+          <div id="hero-carousel-dots" class="hero-carousel-dots" aria-label="Fotos do carrossel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 2: DIAGNÓSTICO ==================== -->
+    <section id="slide-diagnostico" class="slide-view" aria-labelledby="diag-title">
+      <div class="slide-container">
+        <header class="slide-header">
+          <div class="slide-header-left">
+            <span class="slide-category">02 // DADOS SETORIAIS</span>
+            <h2 id="diag-title" class="slide-title">DIAGNÓSTICO MULTITEMÁTICO</h2>
+            <p class="slide-subtitle">Navegue pelas dimensões estruturais analisadas no território da Vila Sapo sem sair da tela.</p>
+          </div>
+          <div class="slide-header-right">
+            <span class="slide-counter-badge">Painel de Indicadores</span>
+          </div>
+        </header>
+
+        <!-- Subtabs Navigation -->
+        <div class="diag-subtabs-nav" role="tablist" aria-label="Abas temáticas do diagnóstico">
+          <button class="diag-subtab-btn active" role="tab" aria-selected="true" data-panel="panel-infra">
+            Infraestrutura <span class="diag-subtab-tag">Crítico</span>
+          </button>
+          <button class="diag-subtab-btn" role="tab" aria-selected="false" data-panel="panel-saneamento">
+            Saneamento <span class="diag-subtab-tag">100% Esgoto</span>
+          </button>
+          <button class="diag-subtab-btn" role="tab" aria-selected="false" data-panel="panel-moradia">
+            Moradia <span class="diag-subtab-tag">Estrutura</span>
+          </button>
+          <button class="diag-subtab-btn" role="tab" aria-selected="false" data-panel="panel-saude">
+            Saúde <span class="diag-subtab-tag">Doenças</span>
+          </button>
+          <button class="diag-subtab-btn" role="tab" aria-selected="false" data-panel="panel-educacao">
+            Educação <span class="diag-subtab-tag">Acesso</span>
+          </button>
+          <button class="diag-subtab-btn" role="tab" aria-selected="false" data-panel="panel-alimentar">
+            Alimentação <span class="diag-subtab-tag">Insegurança</span>
+          </button>
+          <button class="diag-subtab-btn" role="tab" aria-selected="false" data-panel="panel-direitos">
+            Direitos <span class="diag-subtab-tag">Gênero & Raça</span>
+          </button>
+        </div>
+
+        <!-- Panels Container -->
+        <div class="diag-panels-container">
+          
+          <!-- Panel 1: Infraestrutura -->
+          <div id="panel-infra" class="diag-panel active" role="tabpanel">
+            <div class="diag-summary-strip">
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Alagamentos na Residência</span>
+                <span class="diag-strip-num">90.5%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Vias Não Pavimentadas</span>
+                <span class="diag-strip-num">95.2%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Presença de Vetores Peçonhentos</span>
+                <span class="diag-strip-num">95.2%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Histórico de Óbitos por Cheias</span>
+                <span class="diag-strip-num">47.6%</span>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Frequência dos Alagamentos</span>
+                  <span class="card-badge critical">Risco Pluvial</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-freq-alagamento"></canvas>
+                </div>
+              </div>
+
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Prejuízos Materiais por Enchente</span>
+                  <span class="card-badge critical">Perdas Físicas</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-prejuizos"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Fauna Peçonhenta Pós-Chuva</span>
+                  <span class="card-badge warning">Vetores</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-animais"></canvas>
+                </div>
+              </div>
+
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Problemas Estruturais do Território</span>
+                  <span class="card-badge brand">Ausência Estatal</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-problemas-bairro"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Saneamento -->
+          <div id="panel-saneamento" class="diag-panel" role="tabpanel">
+            <div class="diag-summary-strip">
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Ausência de Rede de Esgoto</span>
+                <span class="diag-strip-num">100%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Descarte Direto em Rio / Calha</span>
+                <span class="diag-strip-num">61.9%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Falta Regular de Água Tratada</span>
+                <span class="diag-strip-num">85.7%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Doenças Ligadas à Água Contaminada</span>
+                <span class="diag-strip-num">38.1%</span>
+              </div>
+            </div>
+
+            <div class="grid-3">
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Destino do Esgoto Sanitário</span>
+                  <span class="card-badge critical">Emergência</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-esgoto"></canvas>
+                </div>
+              </div>
+
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Interrupção no Abastecimento de Água</span>
+                  <span class="card-badge warning">Segurança Hídrica</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-falta-agua"></canvas>
+                </div>
+              </div>
+
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Doenças de Veiculação Hídrica</span>
+                  <span class="card-badge critical">Saúde Coletiva</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-doencas-agua"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Moradia -->
+          <div id="panel-moradia" class="diag-panel" role="tabpanel">
+            <div class="diag-summary-strip">
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Moradias Próprias em Ocupação</span>
+                <span class="diag-strip-num">90.5%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Danos Estruturais / Infiltração</span>
+                <span class="diag-strip-num">76.2%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Adensamento Excessivo (4+ pessoas)</span>
+                <span class="diag-strip-num">61.9%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Renda Familiar Menor que 1 SM</span>
+                <span class="diag-strip-num">61.9%</span>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Problemas Estruturais na Residência</span>
+                  <span class="card-badge warning">Danos Físicos</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-estruturais"></canvas>
+                </div>
+              </div>
+
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Tipo de Propriedade do Imóvel</span>
+                  <span class="card-badge brand">Posse da Terra</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-propriedade"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Pessoas por Residência</span>
+                  <span class="card-badge info">Demografia</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-pessoas"></canvas>
+                </div>
+              </div>
+
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Faixa de Renda Familiar</span>
+                  <span class="card-badge critical">Renda</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-renda"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 4: Saúde -->
+          <div id="panel-saude" class="diag-panel" role="tabpanel">
+            <div class="diag-summary-strip">
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Desassistência em Saúde Básica</span>
+                <span class="diag-strip-num">71.4%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Dores e Doenças Crônicas</span>
+                <span class="diag-strip-num">66.7%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Sem Atendimento Psicológico</span>
+                <span class="diag-strip-num">90.5%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Impacto Emocional das Enchentes</span>
+                <span class="diag-strip-num">81.0%</span>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Preocupações de Saúde mais Frequentes</span>
+                  <span class="card-badge critical">Epidemiologia</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-preocupacoes-saude"></canvas>
+                </div>
+              </div>
+
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Impacto das Enchentes na Saúde Familiar</span>
+                  <span class="card-badge warning">Vulnerabilidade</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-prejuizos-familia"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 5: Educação -->
+          <div id="panel-educacao" class="diag-panel" role="tabpanel">
+            <div class="diag-summary-strip">
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Mulheres sem Fundamental Completo</span>
+                <span class="diag-strip-num">38.1%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Mulheres em Trabalho Doméstico Não Remunerado</span>
+                <span class="diag-strip-num">47.6%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Necessidade de Apoio Pedagógico</span>
+                <span class="diag-strip-num">47.6%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Demanda de Atividades para Crianças</span>
+                <span class="diag-strip-num">71.4%</span>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Escolaridade da Mulher de Referência</span>
+                  <span class="card-badge brand">Instrução</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-escolaridade-mulher"></canvas>
+                </div>
+              </div>
+
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Ocupação Profissional das Mulheres</span>
+                  <span class="card-badge info">Mercado & Renda</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-ocupacao-mulher"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 6: Alimentação -->
+          <div id="panel-alimentar" class="diag-panel" role="tabpanel">
+            <div class="diag-summary-strip">
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Falta Efetiva de Comida no Prato</span>
+                <span class="diag-strip-num">38.1%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Restrição Severa de Alimentos Frescos</span>
+                <span class="diag-strip-num">76.2%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Famílias com Menos de 3 Refeições/dia</span>
+                <span class="diag-strip-num">42.9%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Dependência de Cestas Emergenciais</span>
+                <span class="diag-strip-num">57.1%</span>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Número de Refeições Diárias</span>
+                  <span class="card-badge critical">Insegurança Alimentar</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-refeicoes"></canvas>
+                </div>
+              </div>
+
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Diagnóstico de Insegurança Alimentar</span>
+                  <span class="card-badge critical">EBIA / Escala</span>
+                </div>
+                <div class="ods-data-box" style="margin-top: 10px;">
+                  <div class="ods-stat-row">
+                    <span class="ods-stat-desc">Famílias em Insegurança Alimentar Moderada/Grave:</span>
+                    <span class="ods-stat-val" style="color: var(--critical);">42.9% (9 lares)</span>
+                  </div>
+                  <div class="ods-stat-row">
+                    <span class="ods-stat-desc">Limitação financeira no cardápio infantil:</span>
+                    <span class="ods-stat-val">76.2%</span>
+                  </div>
+                  <div class="ods-stat-row">
+                    <span class="ods-stat-desc">Acesso a proteína animal restrito:</span>
+                    <span class="ods-stat-val">61.9%</span>
+                  </div>
+                </div>
+                <p class="ods-narrative" style="margin-top: 10px;">
+                  A instabilidade orçamentária força a substituição de alimentos de alto valor nutricional por carboidratos ultraprocessados de baixo custo calórico, agravando o risco nutricional de crianças e idosos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 7: Direitos -->
+          <div id="panel-direitos" class="diag-panel" role="tabpanel">
+            <div class="diag-summary-strip">
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Mulheres como Referência do Lar</span>
+                <span class="diag-strip-num">81.0%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Inscrição Ativa no CadÚnico</span>
+                <span class="diag-strip-num">66.7%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">Preconceito Territorial Vivenciado</span>
+                <span class="diag-strip-num">90.5%</span>
+              </div>
+              <div class="diag-strip-item">
+                <span class="diag-strip-text">População Negra / Parda</span>
+                <span class="diag-strip-num">85.7%</span>
+              </div>
+            </div>
+
+            <div class="grid-3">
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Violações e Vulnerabilidades Vividas</span>
+                  <span class="card-badge critical">Garantia Legal</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-situacoes"></canvas>
+                </div>
+              </div>
+
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Provedor Financeiro Familiar</span>
+                  <span class="card-badge brand">Chefiada Feminina</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-provedor"></canvas>
+                </div>
+              </div>
+
+              <div class="card card-compact">
+                <div class="card-header">
+                  <span class="card-title">Autodeclaração Étnico-Racial</span>
+                  <span class="card-badge info">Justiça Racial</span>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-raca"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 3: ODS ONU ==================== -->
+    <section id="slide-ods" class="slide-view" aria-labelledby="ods-title">
+      <div class="slide-container">
+        <header class="slide-header">
+          <div class="slide-header-left">
+            <span class="slide-category">03 // AGENDA 2030</span>
+            <h2 id="ods-title" class="slide-title">CONEXÃO COM OS ODS DA ONU</h2>
+            <p class="slide-subtitle">Cruzamento dos indicadores censitários da Vila Sapo com os Objetivos de Desenvolvimento Sustentável.</p>
+          </div>
+          <div class="slide-header-right">
+            <span class="slide-counter-badge">Pacto Global</span>
+          </div>
+        </header>
+
+        <!-- ODS 6-Card Grid -->
+        <div class="ods-grid">
+          
+          <!-- ODS 1 -->
+          <article class="ods-card" style="--ods-color: #E5243B;">
+            <div class="ods-header">
+              <div class="ods-badge">1</div>
+              <div class="ods-header-text">
+                <span class="ods-meta-label">ODS 1</span>
+                <span class="ods-title">Erradicação da Pobreza</span>
+              </div>
+            </div>
+            <div class="ods-status-pill">Meta 1.4 — Acesso a Recursos Básicos</div>
+            <div class="ods-data-box">
+              <div class="ods-stat-row">
+                <span class="ods-stat-desc">Renda menor que 1 Salário Mínimo:</span>
+                <span class="ods-stat-val">61.9%</span>
+              </div>
+              <div class="ods-stat-row">
+                <span class="ods-stat-desc">Inscritas no CadÚnico:</span>
+                <span class="ods-stat-val">66.7%</span>
+              </div>
+            </div>
+            <p class="ods-narrative">
+              Alta dependência de programas de transferência de renda em decorrência da precariedade de inserção no mercado formal.
+            </p>
+          </article>
+
+          <!-- ODS 2 -->
+          <article class="ods-card" style="--ods-color: #DDA63A;">
+            <div class="ods-header">
+              <div class="ods-badge">2</div>
+              <div class="ods-header-text">
+                <span class="ods-meta-label">ODS 2</span>
+                <span class="ods-title">Fome Zero & Nutrição</span>
+              </div>
+            </div>
+            <div class="ods-status-pill">Meta 2.1 — Fim da Insegurança Alimentar</div>
+            <div class="ods-data-box">
+              <div class="ods-stat-row">
+                <span class="ods-stat-desc">Falta efetiva de alimentos no domicílio:</span>
+                <span class="ods-stat-val">38.1%</span>
+              </div>
+              <div class="ods-stat-row">
+                <span class="ods-stat-desc">Restrição de verduras, frutas e carnes:</span>
+                <span class="ods-stat-val">76.2%</span>
+              </div>
+            </div>
+            <p class="ods-narrative">
+              Insegurança alimentar severa afeta o desenvolvimento infantil e a estabilidade biológica das famílias da margem do rio.
+            </p>
+          </article>
+
+          <!-- ODS 3 -->
+          <article class="ods-card" style="--ods-color: #4C9F38;">
+            <div class="ods-header">
+              <div class="ods-badge">3</div>
+              <div class="ods-header-text">
+                <span class="ods-meta-label">ODS 3</span>
+                <span class="ods-title">Saúde & Bem-Estar</span>
+              </div>
+            </div>
+            <div class="ods-status-pill">Meta 3.9 — Redução de Doenças Hídricas</div>
+            <div class="ods-data-box">
+              <div class="ods-stat-row">
+                <span class="ods-stat-desc">Desassistência médica nos postos de saúde:</span>
+                <span class="ods-stat-val">71.4%</span>
+              </div>
+              <div class="ods-stat-row">
+                <span class="ods-stat-desc">Doenças de veiculação hídrica reportadas:</span>
+                <span class="ods-stat-val">38.1%</span>
+              </div>
+            </div>
+            <p class="ods-narrative">
+              90.5% das famílias relatam ausência de apoio psicológico para lidar com as perdas materiais e o trauma das inundações recorrentes.
+            </p>
+          </article>
+
+          <!-- ODS 6 -->
+          <article class="ods-card" style="--ods-color: #26BDE2;">
+            <div class="ods-header">
+              <div class="ods-badge">6</div>
+              <div class="ods-header-text">
+                <span class="ods-meta-label">ODS 6</span>
+                <span class="ods-title">Água Potável & Saneamento</span>
+              </div>
+            </div>
+            <div class="ods-status-pill">Meta 6.2 — Saneamento Universal</div>
+            <div class="ods-data-box">
+              <div class="ods-stat-row">
+                <span class="ods-stat-desc">Ausência de esgotamento sanitário canalizado:</span>
+                <span class="ods-stat-val">100%</span>
+              </div>
+              <div class="ods-stat-row">
+                <span class="ods-stat-desc">Despejo direto de dejetos na calha do rio:</span>
+                <span class="ods-stat-val">61.9%</span>
+              </div>
+            </div>
+            <p class="ods-narrative">
+              85.7% sofrem com interrupções no fornecimento de água limpa, forçando o armazenamento precário e suscetível à contaminação.
+            </p>
+          </article>
+
+          <!-- ODS 10 -->
+          <article class="ods-card" style="--ods-color: #DD1367;">
+            <div class="ods-header">
+              <div class="ods-badge">10</div>
+              <div class="ods-header-text">
+                <span class="ods-meta-label">ODS 10</span>
+                <span class="ods-title">Redução das Desigualdades</span>
+              </div>
+            </div>
+            <div class="ods-status-pill">Meta 10.2 — Inclusão Social e Territorial</div>
+            <div class="ods-data-box">
+              <div class="ods-stat-row">
+                <span class="ods-stat-desc">Famílias chefiadas por mulheres:</span>
+                <span class="ods-stat-val">81.0%</span>
+              </div>
+              <div class="ods-stat-row">
+                <span class="ods-stat-desc">Preconceito e discriminação territorial:</span>
+                <span class="ods-stat-val">90.5%</span>
+              </div>
+            </div>
+            <p class="ods-narrative">
+              Sobreposição de desigualdades de gênero, raça e endereço marginaliza a juventude no acesso ao emprego formal e transporte.
+            </p>
+          </article>
+
+          <!-- ODS 11 -->
+          <article class="ods-card" style="--ods-color: #FD9D24;">
+            <div class="ods-header">
+              <div class="ods-badge">11</div>
+              <div class="ods-header-text">
+                <span class="ods-meta-label">ODS 11</span>
+                <span class="ods-title">Cidades & Comunidades Sustentáveis</span>
+              </div>
+            </div>
+            <div class="ods-status-pill">Meta 11.5 — Resiliência a Desastres</div>
+            <div class="ods-data-box">
+              <div class="ods-stat-row">
+                <span class="ods-stat-desc">Casas situadas em área de risco climático:</span>
+                <span class="ods-stat-val">100%</span>
+              </div>
+              <div class="ods-stat-row">
+                <span class="ods-stat-desc">Histórico de mortes por afogamento/cheias:</span>
+                <span class="ods-stat-val">47.6%</span>
+              </div>
+            </div>
+            <p class="ods-narrative">
+              90.5% das residências sofrem com a elevação da calha do Rio Ingaúra, exigindo intervenção urgente de macrodrenagem e urbanização.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 4: MAPA ==================== -->
+    <section id="slide-mapa" class="slide-view" aria-labelledby="mapa-title">
+      <div class="slide-container">
+        <header class="slide-header">
+          <div class="slide-header-left">
+            <span class="slide-category">04 // CARTOGRAFIA SOCIAL</span>
+            <h2 id="mapa-title" class="slide-title">MAPA TERRITORIAL DA VILA SAPO</h2>
+            <p class="slide-subtitle">Espacialização dos domicílios, calha hídrica do Rio Ingaúra, vetores sanitários e registros fotográficos de campo.</p>
+          </div>
+          <div class="slide-header-right">
+            <span class="slide-counter-badge">CartoDB Positron • Leaflet</span>
+          </div>
+        </header>
+
+        <div class="map-layout-deck">
+          <!-- Left: Leaflet Map -->
+          <div class="map-viewport-card">
+            <div id="leaflet-map" role="region" aria-label="Mapa georreferenciado da Vila Sapo"></div>
+          </div>
+
+          <!-- Right: Methodological Observation Note + Guidance -->
+          <div class="map-side-panel">
+            
+            <!-- Methodological Observation Note Required by User -->
+            <div class="map-methodology-box">
+              <div class="map-methodology-title">
+                <span>NOTA METODOLÓGICA DE DELIMITAÇÃO</span>
+              </div>
+              <p class="map-methodology-text">
+                Considera-se como <strong>região da Vila Sapo</strong> todas as residências situadas à <strong>margem do Rio Ingaúra</strong>. Ressalta-se e entende-se tecnicamente que os impactos socioambientais, sanitários e de refluxo de enchentes atingem diretamente mesmo as casas que não estão frontalmente encostadas na calha do rio.
+              </p>
+            </div>
+
+            <!-- Technical Instructions on Data Input -->
+            <div class="map-guidance-card">
+              <div class="map-guidance-title">Orientações Técnicas para Inserção de Dados</div>
+              <ol class="map-guidance-steps">
+                <li><strong>Levantamento de Coordenadas:</strong> Registre as coordenadas (latitude e longitude) com aparelho GPS ou formulário geolocalizado no domicílio.</li>
+                <li><strong>Adição de Marcador:</strong> Insira o novo registro em <code>js/map.js</code> no array <code>markers</code> com coordenadas, código técnico e tipologia.</li>
+                <li><strong>Vínculo Fotográfico:</strong> Adicione o arquivo de foto em <code>public/fotos/</code> e vincule o caminho na propriedade <code>img</code> do marcador para exibição automática no popup.</li>
+              </ol>
+            </div>
+
+            <!-- Photo Thumbnails -->
+            <div class="map-photo-preview-box">
+              <div class="map-guidance-title">Registros de Campo (Clique nos Marcadores)</div>
+              <div class="map-photo-thumb-grid">
+                <img src="/fotos/foto-1.jpg" alt="Ponto 01 - Núcleo Vila Sapo" class="map-photo-thumb" title="P.01 - Núcleo Habitacional" />
+                <img src="/fotos/foto-2.jpg" alt="Ponto 02 - Margem do Rio Ingaúra" class="map-photo-thumb" title="P.02 - Eixo de Enchente" />
+                <img src="/fotos/foto-3.jpg" alt="Ponto 03 - Valas de Esgoto" class="map-photo-thumb" title="P.03 - Esgotamento Sanitário" />
+                <img src="/fotos/foto-4.jpg" alt="Ponto 04 - Vetores e Calha" class="map-photo-thumb" title="P.04 - Proximidade com o Rio" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 5: DEPOIMENTOS ==================== -->
+    <section id="slide-depoimentos" class="slide-view" aria-labelledby="depo-title">
+      <div class="slide-container">
+        <header class="slide-header">
+          <div class="slide-header-left">
+            <span class="slide-category">05 // MEMÓRIA ORAL</span>
+            <h2 id="depo-title" class="slide-title">DEPOIMENTOS & VOZES DA COMUNIDADE</h2>
+            <p class="slide-subtitle">Relatos reais das moradoras e mães de família sobre a vivência cotidiana e a resistência na Vila Sapo.</p>
+          </div>
+          <div class="slide-header-right">
+            <span class="slide-counter-badge">Escuta Qualificada</span>
+          </div>
+        </header>
+
+        <div class="testimonials-deck-layout">
+          <!-- Left: Quotes Grid -->
+          <div class="testimonials-grid-scroll">
+            
+            <article class="testimonial-card">
+              <p class="testimonial-quote">
+                "Quando a maré enche e a chuva desce forte ao mesmo tempo, a água podre do rio sobe na altura do peito. A gente passa a noite inteira em claro em cima da cama segurando os filhos e vendo os móveis boiarem."
+              </p>
+              <div class="testimonial-author">
+                <span>Moradora da Margem do Rio</span>
+                <span class="testimonial-tag">Residente há 14 anos</span>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <p class="testimonial-quote">
+                "Aqui não tem cano de esgoto. A água servida corre no meio da rua e na beira da porta. Meus netos vivem com coceira no corpo, vômito e diarreia. A gente só pede que o poder público olhe para as nossas crianças."
+              </p>
+              <div class="testimonial-author">
+                <span>Dona de Casa e Avó</span>
+                <span class="testimonial-tag">Chefe de Família</span>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <p class="testimonial-quote">
+                "A Vila Sapo é vista com preconceito por quem é de fora. Se você vai procurar emprego e dá esse endereço, a pessoa desconfia. Mas aqui só tem gente trabalhadora que acorda 5 da manhã para lutar pelo pão."
+              </p>
+              <div class="testimonial-author">
+                <span>Jovem Trabalhador Autônomo</span>
+                <span class="testimonial-tag">Núcleo Novo Angelim</span>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <p class="testimonial-quote">
+                "O Instituto Ádapo foi a única porta que se abriu para nos escutar de verdade. Entraram na nossa casa, viram nossa realidade e estão levando essa denúncia para onde tem que chegar."
+              </p>
+              <div class="testimonial-author">
+                <span>Liderança Comunitária Feminina</span>
+                <span class="testimonial-tag">Mãe Solo</span>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Right: Institutional Audio Player -->
+          <div class="audio-player-card">
+            <div class="audio-header">
+              <span class="audio-tag">REGISTRO SONORO DE CAMPO</span>
+              <h3 class="audio-title">Relato de Moradora</h3>
+              <p class="audio-subtitle">Depoimento gravado durante as incursões de campo do diagnóstico territorial na calha do Rio Ingaúra.</p>
+            </div>
+
+            <div class="audio-main-controls">
+              <button id="audio-play-btn" class="audio-play-btn" aria-label="Reproduzir depoimento em áudio">
+                <svg class="audio-play-icon" viewBox="0 0 24 24">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <svg class="audio-pause-icon" viewBox="0 0 24 24">
+                  <rect x="6" y="4" width="4" height="16"></rect>
+                  <rect x="14" y="4" width="4" height="16"></rect>
+                </svg>
+              </button>
+
+              <div class="audio-track-info">
+                <span id="audio-status-label" class="audio-status-label">DEPOIMENTO EM ÁUDIO PRONTO</span>
+                
+                <div id="audio-progress-bar" class="audio-progress-bar" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                  <div id="audio-progress-fill" class="audio-progress-fill"></div>
+                </div>
+
+                <div class="audio-time-row">
+                  <span id="audio-time-current">00:00</span>
+                  <span id="audio-time-total">02:45</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="audio-notice-box">
+              <strong>Observação Institucional:</strong> Este reprodutor está configurado para executar o arquivo sonoro oficial fornecido pela equipe de campo. O arquivo de áudio será anexado nesta interface para audiências públicas e comissões legislativas.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 6: NA MÍDIA ==================== -->
+    <section id="slide-midia" class="slide-view" aria-labelledby="midia-title">
+      <div class="slide-container">
+        <header class="slide-header">
+          <div class="slide-header-left">
+            <span class="slide-category">06 // REPERCUSSÃO PÚBLICA</span>
+            <h2 id="midia-title" class="slide-title">VILA SAPO NA IMPRENSA</h2>
+            <p class="slide-subtitle">Registros jornalísticos, reportagens investigativas e denúncias sobre as enchentes e o descaso sanitário.</p>
+          </div>
+          <div class="slide-header-right">
+            <span class="slide-counter-badge">Mural de Denúncias</span>
+          </div>
+        </header>
+
+        <div class="media-deck-grid">
+          
+          <article class="media-card">
+            <div class="media-header">
+              <span class="media-source-tag">IMPRENSA MARANHENSE</span>
+              <span class="media-date">Período Chuvoso • 2024</span>
+            </div>
+            <h3 class="media-title">Transbordamento de calhas hídricas atinge dezenas de famílias na Grande Ilha</h3>
+            <p class="media-snippet">
+              Reportagens locais documentaram a situação desesperadora de moradores do Novo Angelim durante as chuvas de março, quando o Rio Ingaúra transbordou, invadindo casas e arrastando mantimentos e móveis de famílias inteiras.
+            </p>
+            <div class="media-impact-badge">Pauta: Emergência Climática Urbana</div>
+          </article>
+
+          <article class="media-card">
+            <div class="media-header">
+              <span class="media-source-tag">TELEJORNALISMO INVESTIGATIVO</span>
+              <span class="media-date">Edição Regional • 2023</span>
+            </div>
+            <h3 class="media-title">Valas de esgoto a céu aberto geram risco crônico de infecções em crianças</h3>
+            <p class="media-snippet">
+              Matéria em vídeo denunciou a proliferação de vetores peçonhentos e doenças dermatológicas provocadas pela proximidade direta das moradias com valas sem tratamento sanitário no Novo Angelim.
+            </p>
+            <div class="media-impact-badge">Pauta: Saneamento Básico</div>
+          </article>
+
+          <article class="media-card">
+            <div class="media-header">
+              <span class="media-source-tag">DIREITOS HUMANOS</span>
+              <span class="media-date">Relatório Social • 2025</span>
+            </div>
+            <h3 class="media-title">Comunidades ribeirinhas exigem intervenção de macrodrenagem e regularização fundiária</h3>
+            <p class="media-snippet">
+              Entidades de defesa comunitária e moradores protocolaram representações formais junto à Defensoria Pública do Estado, solicitando vistorias periciais e inclusão urgente em planos municipais de drenagem.
+            </p>
+            <div class="media-impact-badge">Pauta: Incidência Política</div>
+          </article>
+
+          <article class="media-card">
+            <div class="media-header">
+              <span class="media-source-tag">VEÍCULOS COMUNITÁRIOS</span>
+              <span class="media-date">Levantamento Local • 2026</span>
+            </div>
+            <h3 class="media-title">Mobilização civil: Diagnóstico Socioterritorial fundamenta ações pelo direito à moradia</h3>
+            <p class="media-snippet">
+              A atuação articulada do Instituto Ádapo com a Vila Sapo destaca que a superação da desigualdade em São Luís depende obrigatoriamente de investimentos concretos nas periferias invisibilizadas.
+            </p>
+            <div class="media-impact-badge">Pauta: Justiça Socioespacial</div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 7: INSTITUTO ÁDAPO ==================== -->
+    <section id="slide-adapo" class="slide-view" aria-labelledby="adapo-title">
+      <div class="slide-container">
+        <header class="slide-header">
+          <div class="slide-header-left">
+            <span class="slide-category">07 // ATUAÇÃO SOCIAL</span>
+            <h2 id="adapo-title" class="slide-title">INSTITUTO ÁDAPO NO TERRITÓRIO</h2>
+            <p class="slide-subtitle">Avaliação do trabalho comunitário pelas famílias e escuta qualificada das prioridades comunitárias.</p>
+          </div>
+          <div class="slide-header-right">
+            <span class="slide-counter-badge">100% de Aprovação</span>
+          </div>
+        </header>
+
+        <div class="adapo-deck-layout">
+          
+          <!-- Left: Institutional Overview & Charts -->
+          <div class="adapo-info-col">
+            <div class="adapo-hero-card">
+              <div class="card-header">
+                <span class="card-title">Avaliação do Instituto pelas 21 Famílias</span>
+                <span class="card-badge brand">Aprovação Unânime</span>
+              </div>
+              <div class="grid-2" style="margin-bottom: var(--space-md);">
+                <div class="stat-display">
+                  <span class="stat-number brand">78.9%</span>
+                  <span class="stat-caption">Avaliação Excelente</span>
+                </div>
+                <div class="stat-display">
+                  <span class="stat-number">21.1%</span>
+                  <span class="stat-caption">Avaliação Boa</span>
+                </div>
+              </div>
+              <div class="chart-wrapper" style="height: 180px;">
+                <canvas id="chart-avaliacao-adapo"></canvas>
+              </div>
+            </div>
+
+            <div class="card card-compact">
+              <div class="card-header">
+                <span class="card-title">Como as Famílias Conheceram o Ádapo</span>
+                <span class="card-badge info">Vínculo Comunitário</span>
+              </div>
+              <div class="chart-wrapper" style="height: 170px;">
+                <canvas id="chart-como-conheceu"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Community Priorities & Demands -->
+          <div class="adapo-stats-col">
+            <div class="adapo-demands-card">
+              <div class="card-header">
+                <span class="card-title">Prioridades Demandadas pelas Famílias</span>
+                <span class="card-badge brand">Voz da Comunidade</span>
+              </div>
+              
+              <div class="demand-item">
+                <div class="demand-label-row">
+                  <span class="demand-label">Crianças Neurodivergentes / Espectro Autista</span>
+                  <span class="demand-val">71.4% (15 lares)</span>
+                </div>
+                <div class="demand-bar">
+                  <div class="demand-bar-fill" style="width: 71.4%;"></div>
+                </div>
+              </div>
+
+              <div class="demand-item">
+                <div class="demand-label-row">
+                  <span class="demand-label">Atividades Esportivas e Culturais</span>
+                  <span class="demand-val">61.9% (13 lares)</span>
+                </div>
+                <div class="demand-bar">
+                  <div class="demand-bar-fill" style="width: 61.9%;"></div>
+                </div>
+              </div>
+
+              <div class="demand-item">
+                <div class="demand-label-row">
+                  <span class="demand-label">Cursos de Qualificação e Renda para Mulheres</span>
+                  <span class="demand-val">57.1% (12 lares)</span>
+                </div>
+                <div class="demand-bar">
+                  <div class="demand-bar-fill" style="width: 57.1%;"></div>
+                </div>
+              </div>
+
+              <div class="demand-item">
+                <div class="demand-label-row">
+                  <span class="demand-label">Reforço Escolar e Acompanhamento Pedagógico</span>
+                  <span class="demand-val">47.6% (10 lares)</span>
+                </div>
+                <div class="demand-bar">
+                  <div class="demand-bar-fill" style="width: 47.6%;"></div>
+                </div>
+              </div>
+
+              <div class="demand-item">
+                <div class="demand-label-row">
+                  <span class="demand-label">Segurança Alimentar e Apoio Nutricional</span>
+                  <span class="demand-val">42.9% (9 lares)</span>
+                </div>
+                <div class="demand-bar">
+                  <div class="demand-bar-fill" style="width: 42.9%;"></div>
+                </div>
+              </div>
+
+              <div class="chart-wrapper" style="height: 170px; margin-top: 10px;">
+                <canvas id="chart-atividades-desejadas"></canvas>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="adapo-contact-strip">
+          <span><strong>Instituto Ádapo</strong> • Organização da Sociedade Civil atuante no Novo Angelim</span>
+          <span class="adapo-contact-link">contato@institutoadapo.org.br</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
