@@ -210,32 +210,30 @@ function setupKeyboardAndTouch() {
   }, { passive: true });
 }
 
-// ---------- Hero Dedicated Photo Showcase ----------
+// ---------- Hero Immersive Photo Atmosphere & Floating Dock ----------
 function setupHeroCarousel() {
-  const track = document.getElementById('hero-carousel-track');
-  const thumbsStrip = document.getElementById('hero-carousel-dots');
-  const prevBtn = document.getElementById('showcase-prev-btn');
-  const nextBtn = document.getElementById('showcase-next-btn');
-  const playBtn = document.getElementById('showcase-play-btn');
+  const track = document.getElementById('hero-immersive-track');
+  const dotsStrip = document.getElementById('hero-carousel-dots');
+  const prevBtn = document.getElementById('hero-prev-btn');
+  const nextBtn = document.getElementById('hero-next-btn');
+  const playBtn = document.getElementById('hero-play-btn');
 
   if (!track) return;
 
   // Render photo slides in track
   track.innerHTML = HERO_PHOTOS.map((item, idx) => `
-    <div class="showcase-photo-slide ${idx === 0 ? 'active' : ''}" style="background-image: url('${item.src}');" data-index="${idx}"></div>
+    <div class="hero-immersive-slide ${idx === 0 ? 'active' : ''}" style="background-image: url('${item.src}');" data-index="${idx}"></div>
   `).join('');
 
-  // Render thumbnails in strip
-  if (thumbsStrip) {
-    thumbsStrip.innerHTML = HERO_PHOTOS.map((item, idx) => `
-      <button class="showcase-thumb-btn ${idx === 0 ? 'active' : ''}" data-index="${idx}" aria-label="Visualizar Foto ${idx + 1}" style="background-image: url('${item.src}');">
-        <span class="thumb-idx">${idx + 1}</span>
-      </button>
+  // Render progress segments in dots strip
+  if (dotsStrip) {
+    dotsStrip.innerHTML = HERO_PHOTOS.map((item, idx) => `
+      <button class="hero-progress-bar-item ${idx === 0 ? 'active' : ''}" data-index="${idx}" aria-label="Visualizar Foto ${idx + 1}" title="Foto ${idx + 1}: ${item.tag}"></button>
     `).join('');
 
-    thumbsStrip.querySelectorAll('.showcase-thumb-btn').forEach(btn => {
+    dotsStrip.querySelectorAll('.hero-progress-bar-item').forEach(btn => {
       btn.addEventListener('click', (e) => {
-        const targetBtn = e.target.closest('.showcase-thumb-btn');
+        const targetBtn = e.target.closest('.hero-progress-bar-item');
         if (!targetBtn) return;
         const idx = parseInt(targetBtn.dataset.index, 10);
         setHeroPhoto(idx);
@@ -262,17 +260,22 @@ function setupHeroCarousel() {
 
   // Play/Pause button
   if (playBtn) {
+    const pauseIcon = playBtn.querySelector('.icon-pause');
+    const playIcon = playBtn.querySelector('.icon-play');
+
     playBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       isHeroPlaying = !isHeroPlaying;
       if (isHeroPlaying) {
         startHeroCarouselTimer();
-        playBtn.innerHTML = '<span class="play-icon">⏸</span>';
-        playBtn.setAttribute('title', 'Pausar rotação');
+        if (pauseIcon) pauseIcon.style.display = 'block';
+        if (playIcon) playIcon.style.display = 'none';
+        playBtn.setAttribute('title', 'Pausar rotação automática');
       } else {
         clearInterval(heroCarouselInterval);
-        playBtn.innerHTML = '<span class="play-icon">▶</span>';
-        playBtn.setAttribute('title', 'Reproduzir rotação automática');
+        if (pauseIcon) pauseIcon.style.display = 'none';
+        if (playIcon) playIcon.style.display = 'block';
+        playBtn.setAttribute('title', 'Iniciar rotação automática');
       }
     });
   }
@@ -280,25 +283,26 @@ function setupHeroCarousel() {
   // Start auto timer
   startHeroCarouselTimer();
 
-  // Set initial text
+  // Set initial text & state
   setHeroPhoto(0);
 }
 
 function setHeroPhoto(index) {
   heroCurrentPhoto = index;
-  const photos = document.querySelectorAll('.showcase-photo-slide');
-  const thumbs = document.querySelectorAll('.showcase-thumb-btn');
+  const photos = document.querySelectorAll('.hero-immersive-slide');
+  const dots = document.querySelectorAll('.hero-progress-bar-item');
   const indexEl = document.getElementById('hero-photo-index');
   const totalEl = document.getElementById('hero-photo-total');
-  const captionEl = document.getElementById('showcase-caption-text');
-  const tagEl = document.querySelector('.showcase-caption-tag');
+  const captionEl = document.getElementById('hero-photo-caption');
+  const tagEl = document.getElementById('hero-photo-tag');
+  const locEl = document.getElementById('hero-photo-location');
 
   photos.forEach((photo, idx) => {
     photo.classList.toggle('active', idx === heroCurrentPhoto);
   });
 
-  thumbs.forEach((thumb, idx) => {
-    thumb.classList.toggle('active', idx === heroCurrentPhoto);
+  dots.forEach((dot, idx) => {
+    dot.classList.toggle('active', idx === heroCurrentPhoto);
   });
 
   if (indexEl) indexEl.textContent = String(heroCurrentPhoto + 1).padStart(2, '0');
@@ -307,7 +311,8 @@ function setHeroPhoto(index) {
   const photoData = HERO_PHOTOS[heroCurrentPhoto];
   if (photoData) {
     if (captionEl) captionEl.textContent = photoData.caption;
-    if (tagEl) tagEl.textContent = photoData.tag;
+    if (tagEl) tagEl.textContent = `REGISTRO DE CAMPO // ${photoData.tag}`;
+    if (locEl) locEl.textContent = photoData.location;
   }
 }
 

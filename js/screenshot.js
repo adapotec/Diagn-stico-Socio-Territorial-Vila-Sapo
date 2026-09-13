@@ -65,10 +65,19 @@ export function initScreenshotEngine() {
             .card, .card-compact,
             .diag-strip-item,
             .hero-content-col,
-            .hero-showcase-card {
+            .hero-photo-dock,
+            .hero-photo-dock-card {
               opacity: 1 !important;
               transform: none !important;
               filter: none !important;
+            }
+
+            .hero-photo-dock-card {
+              background-color: #FFFFFF !important;
+              background: #FFFFFF !important;
+              border: 1px solid #CBD5E1 !important;
+              box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08) !important;
+              opacity: 1 !important;
             }
 
             /* Garantir fundos brancos sólidos e bordas nítidas nos cartões */

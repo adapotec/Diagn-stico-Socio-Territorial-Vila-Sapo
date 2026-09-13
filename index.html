@@ -111,12 +111,17 @@
 
     <!-- ==================== SLIDE 1: CAPA / HERO ==================== -->
     <section id="slide-capa" class="slide-view active" aria-labelledby="hero-title">
-      <!-- Ambient Background Atmosphere -->
-      <div class="hero-ambient-bg">
-        <div class="hero-ambient-glow"></div>
+      <!-- Immersive Full-Bleed Photo Carousel Layer -->
+      <div class="hero-immersive-backdrop" aria-hidden="true">
+        <div id="hero-immersive-track" class="hero-immersive-track">
+          <!-- Injected via slides.js -->
+        </div>
+        <!-- Horizontal Dissolve Mask: Solid light on left -> Fades out to reveal photos on right -->
+        <div class="hero-immersive-gradient-mask"></div>
       </div>
 
-      <div class="hero-split-container">
+      <!-- Foreground Content Container -->
+      <div class="hero-foreground-wrapper">
         <!-- Left Column: Institutional Header & Macro Metrics -->
         <div class="hero-content-col">
           <div class="hero-top-badge-row">
@@ -185,52 +190,49 @@
           </div>
         </div>
 
-        <!-- Right Column: Dedicated High-Impact Photographic Showcase -->
-        <div class="hero-showcase-col">
-          <div class="hero-showcase-card">
-            <!-- Top Card Header -->
-            <div class="showcase-card-header">
-              <div class="showcase-tag">
-                <span>REGISTRO DE CAMPO // VILA SAPO</span>
+        <!-- Floating Cinematic Photo Caption & Navigation Dock -->
+        <div class="hero-photo-dock" id="hero-photo-dock">
+          <div class="hero-photo-dock-card">
+            <div class="hero-photo-dock-top">
+              <div class="hero-photo-tag-pill">
+                <span class="pulse-dot"></span>
+                <span id="hero-photo-tag">REGISTRO DE CAMPO // CALHA DO RIO INGAÚRA</span>
               </div>
-              <div class="showcase-counter">
-                <span id="hero-photo-index">01</span> / <span id="hero-photo-total">04</span>
+              <div class="hero-photo-counter">
+                <span id="hero-photo-index">01</span> / <span id="hero-photo-total">06</span>
               </div>
             </div>
 
-            <!-- Photo Viewport (True Color, High Resolution, No Milky Overlay) -->
-            <div class="showcase-viewport">
-              <div id="hero-carousel-track" class="showcase-track">
-                <!-- Injected via slides.js -->
+            <p class="hero-photo-desc" id="hero-photo-caption">
+              Moradias e palafitas estruturadas diretamente na margem e leito do Rio Ingaúra sob risco permanente de inundação.
+            </p>
+
+            <div class="hero-photo-dock-bottom">
+              <div class="hero-photo-loc">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span id="hero-photo-location">Margens do Rio Ingaúra • Novo Angelim</span>
               </div>
 
-              <!-- Gradient Scrim for Caption Legibility -->
-              <div class="showcase-gradient-scrim"></div>
-
-              <!-- Photo Caption Bar -->
-              <div class="showcase-caption-box">
-                <span class="showcase-caption-tag">EXTENSÃO DO RIO INGAÚRA</span>
-                <p id="showcase-caption-text" class="showcase-caption-text">
-                  Moradias e tráfego diretamente na margem e leito do Rio Ingaúra sob risco constante de
-                  inundação.
-                </p>
+              <div class="hero-photo-nav-actions">
+                <button class="hero-dock-btn prev" id="hero-prev-btn" aria-label="Foto anterior" title="Foto anterior">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="hero-dock-btn play" id="hero-play-btn" aria-label="Pausar rotação automática" title="Pausar rotação">
+                  <svg class="icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"></rect><rect x="14" y="4" width="4" height="16" rx="1"></rect></svg>
+                  <svg class="icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><polygon points="5 3 19 12 5 21 5 21"></polygon></svg>
+                </button>
+                <button class="hero-dock-btn next" id="hero-next-btn" aria-label="Próxima foto" title="Próxima foto">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
               </div>
-
-              <!-- Floating Navigation Arrows -->
-              <button class="showcase-arrow prev" id="showcase-prev-btn" aria-label="Foto anterior">‹</button>
-              <button class="showcase-arrow next" id="showcase-next-btn" aria-label="Próxima foto">›</button>
             </div>
 
-            <!-- Thumbnail Selector Strip & Controls -->
-            <div class="showcase-footer">
-              <div class="showcase-thumbs-strip" id="hero-carousel-dots" role="tablist"
-                aria-label="Miniaturas das fotos">
-                <!-- Injected via slides.js as interactive thumbnails -->
-              </div>
-              <button id="showcase-play-btn" class="showcase-play-toggle" title="Pausar rotação"
-                aria-label="Pausar rotação automática">
-                <span class="play-icon">⏸</span>
-              </button>
+            <!-- Segmented Progress Indicator Bar -->
+            <div class="hero-dock-progress" id="hero-carousel-dots" role="tablist" aria-label="Indicador das fotos">
+              <!-- Injected dynamically: 6 interactive segment bars -->
             </div>
           </div>
         </div>

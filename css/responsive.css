@@ -41,12 +41,10 @@
     padding: 10px 14px;
   }
 
-  .hero-showcase-card {
-    max-width: 440px;
-  }
-
-  .showcase-viewport {
-    height: 250px;
+  .hero-photo-dock {
+    max-width: 400px;
+    bottom: var(--space-lg);
+    right: var(--space-xl);
   }
 
   .intro-editorial-layout {
@@ -109,20 +107,36 @@
   }
 
   /* Slide 1: Capa */
-  .hero-split-container {
-    grid-template-columns: 1fr;
+  .hero-foreground-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: var(--space-lg) var(--space-md);
     gap: var(--space-lg);
     overflow-y: visible;
   }
 
-  .hero-showcase-card {
-    max-width: 580px;
-    margin: 0 auto;
-    width: 100%;
+  .hero-content-col {
+    max-width: 100%;
   }
 
-  .showcase-viewport {
-    height: 280px;
+  .hero-photo-dock {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    max-width: 100%;
+    margin-top: var(--space-sm);
+  }
+
+  .hero-immersive-gradient-mask {
+    background: linear-gradient(
+      to bottom,
+      #F8FAFC 0%,
+      #F8FAFC 48%,
+      rgba(248, 250, 252, 0.95) 68%,
+      rgba(248, 250, 252, 0.75) 86%,
+      rgba(248, 250, 252, 0.35) 100%
+    );
   }
 
   .hero-macro-stats {
@@ -376,12 +390,12 @@
     gap: 8px;
   }
 
-  .hero-showcase-card {
-    max-width: 100%;
+  .hero-foreground-wrapper {
+    padding: var(--space-md) var(--space-sm);
   }
 
-  .showcase-viewport {
-    height: 220px;
+  .hero-photo-dock-card {
+    padding: 12px 14px;
   }
 
   .hero-bottom-actions {
@@ -494,8 +508,8 @@
     font-size: 1.35rem;
   }
 
-  .showcase-viewport {
-    height: 190px;
+  .hero-photo-dock-card {
+    padding: 10px 12px;
   }
 
   #leaflet-map {
