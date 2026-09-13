@@ -24,37 +24,43 @@ const HERO_PHOTOS = [
     src: '/fotos/hero-1.jpg',
     tag: 'CALHA DO RIO INGAÚRA',
     caption: 'Moradias e palafitas estruturadas diretamente na margem e leito do Rio Ingaúra sob risco permanente de inundação.',
-    location: 'Margens do Rio Ingaúra • Novo Angelim'
+    location: 'Margens do Rio Ingaúra • Novo Angelim',
+    position: 'center right' // Ajuste fino: 'center right', '85% center', '70% 40%', etc.
   },
   {
     src: '/fotos/hero-2.jpg',
     tag: 'SANEAMENTO INEXISTENTE',
     caption: 'Valas de esgoto a céu aberto cortando as passagens das moradias com refluxo direto durante marés e chuvas.',
-    location: 'Setor Central da Vila Sapo'
+    location: 'Setor Central da Vila Sapo',
+    position: 'center right'
   },
   {
     src: '/fotos/hero-3.jpg',
     tag: 'MOBILIDADE & VIAS',
     caption: 'Pontilhões improvisados de madeira sobre o solo lamacento e vias sem qualquer tipo de pavimentação ou drenagem.',
-    location: 'Acesso Principal à Margem do Rio'
+    location: 'Acesso Principal à Margem do Rio',
+    position: 'center right'
   },
   {
     src: '/fotos/hero-4.jpg',
     tag: 'VULNERABILIDADE SOCIAL',
     caption: 'Famílias residentes em área de risco geológico e hídrico permanente às margens do canal fluvial.',
-    location: 'Novo Angelim • São Luís - MA'
+    location: 'Novo Angelim • São Luís - MA',
+    position: 'center right'
   },
   {
     src: '/fotos/hero-5.jpg',
     tag: 'IMPACTO SOCIOAMBIENTAL',
     caption: 'Ausência total de coleta e tratamento de resíduos, com acúmulo de entulhos e proliferação de vetores.',
-    location: 'Trecho Intermediário da Ocupação'
+    location: 'Trecho Intermediário da Ocupação',
+    position: 'center right'
   },
   {
     src: '/fotos/hero-6.jpg',
     tag: 'RESISTÊNCIA COMUNITÁRIA',
     caption: 'Comunidade mapeada pelo Instituto Ádapo em busca de garantia de direitos e dignidade habitacional.',
-    location: 'Vila Sapo • São Luís - MA'
+    location: 'Vila Sapo • São Luís - MA',
+    position: 'center right'
   }
 ];
 
@@ -222,7 +228,7 @@ function setupHeroCarousel() {
 
   // Render photo slides in track
   track.innerHTML = HERO_PHOTOS.map((item, idx) => `
-    <div class="hero-immersive-slide ${idx === 0 ? 'active' : ''}" style="background-image: url('${item.src}');" data-index="${idx}"></div>
+    <div class="hero-immersive-slide ${idx === 0 ? 'active' : ''}" style="background-image: url('${item.src}'); background-position: ${item.position || 'center right'};" data-index="${idx}"></div>
   `).join('');
 
   // Render progress segments in dots strip
