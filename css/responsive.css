@@ -1,171 +1,517 @@
 /* ================================================
-   RESPONSIVE — Presentation Deck Adaptations
+   RESPONSIVE — Comprehensive Multi-Device Design System
    Diagnóstico Socioterritorial da Vila Sapo
    Instituto Ádapo // Light Mode Presentation Deck
-   Zero Emojis, No Purple
+   Zero Emojis, No Purple, Retina & Mobile Ready
    ================================================ */
 
-/* Tablet (max-width: 1100px) */
-@media (max-width: 1100px) {
-  .hero-split-container {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
+/* ====================================================
+   1. LAPTOPS & DESKTOPS COM TELAS MENORES (max-width: 1280px ou max-height: 820px)
+   ==================================================== */
+@media (max-width: 1280px), (max-height: 820px) {
+  :root {
+    --space-xl: 18px;
+    --space-2xl: 24px;
+    --space-3xl: 32px;
+  }
+
+  .slide-view {
+    padding: var(--space-md) var(--space-lg) 78px;
     overflow-y: auto;
-    padding: var(--space-md);
+  }
+
+  .slide-header {
+    margin-bottom: var(--space-md);
+    padding-bottom: 6px;
+  }
+
+  .hero-slide-inner {
+    padding: var(--space-md) var(--space-xl);
+  }
+
+  .hero-title-main {
+    font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  }
+
+  .hero-macro-stats {
+    gap: 8px;
+  }
+
+  .hero-macro-card {
+    padding: 10px 14px;
   }
 
   .hero-showcase-card {
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 440px;
   }
 
   .showcase-viewport {
-    height: 260px;
+    height: 250px;
+  }
+
+  .intro-editorial-layout {
+    gap: var(--space-md);
+  }
+
+  .intro-anchor-card {
+    padding: 16px 18px;
+  }
+
+  .intro-pillar-card {
+    padding: 10px 14px;
+  }
+
+  .map-layout-deck {
+    grid-template-columns: 1fr 310px;
+    gap: var(--space-sm);
+  }
+
+  #leaflet-map {
+    min-height: 320px;
+  }
+
+  .chart-wrapper {
+    height: 200px;
+  }
+}
+
+/* ====================================================
+   2. TABLETS & TELAS MÉDIAS (max-width: 1024px)
+   ==================================================== */
+@media (max-width: 1024px) {
+  /* Global Header & Nav Bar */
+  .deck-header {
+    padding: 0 var(--space-md);
+  }
+
+  .nav-deck {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin: 0 var(--space-sm);
+    padding: 0 4px;
+  }
+
+  .nav-deck::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-deck-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 4px;
+  }
+
+  .nav-deck-link {
+    padding: 6px 10px;
+    white-space: nowrap;
+    font-size: 11px;
+  }
+
+  /* Slide 1: Capa */
+  .hero-split-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    overflow-y: visible;
+  }
+
+  .hero-showcase-card {
+    max-width: 580px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .showcase-viewport {
+    height: 280px;
+  }
+
+  .hero-macro-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Slide 2: Introdução */
+  .intro-editorial-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    overflow-y: visible;
+    height: auto;
+  }
+
+  .intro-pillars-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+
+  .intro-pillar-card:last-child {
+    grid-column: span 2;
+  }
+
+  /* Slide 3: Diagnóstico & Matriz de Indicadores */
+  #slide-diagnostico {
+    height: auto !important;
+    min-height: calc(100vh - var(--nav-height));
+    overflow-y: auto !important;
+    display: block;
+    padding: var(--space-md) var(--space-sm) 84px;
   }
 
   .diag-split-layout {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    gap: var(--space-sm);
-    padding: 0 var(--space-sm);
+    grid-template-rows: auto auto auto;
+    gap: var(--space-md);
+    padding: 0;
+    height: auto;
   }
 
   .diag-sidebar {
     height: auto;
-    max-height: 180px;
+    max-height: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border-default);
+    padding-bottom: var(--space-sm);
   }
 
   .diag-sidebar-nav {
     flex-direction: row;
     overflow-x: auto;
+    scrollbar-width: none;
+    gap: 6px;
+    padding-bottom: 4px;
   }
 
-  .diag-territory-widget, .diag-sidebar-footer {
+  .diag-sidebar-nav::-webkit-scrollbar {
     display: none;
   }
 
-  .hero-macro-stats {
-    grid-template-columns: repeat(2, 1fr);
+  .diag-nav-btn {
+    white-space: nowrap;
+    padding: 8px 12px;
+    flex-shrink: 0;
   }
 
-  .intro-grid,
-  .intro-editorial-layout {
-    grid-template-columns: 1fr;
-    overflow-y: auto;
-    max-height: calc(100vh - 170px);
+  .diag-territory-widget,
+  .diag-sidebar-footer {
+    display: none;
+  }
+
+  .diag-detail-panel {
+    height: auto;
+    max-height: none;
+  }
+
+  /* Slide 4: ODS */
+  .ods-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-md);
   }
 
-  .pillar-dual-grid {
-    grid-template-columns: 1fr 1fr;
+  .ods-card:last-child {
+    grid-column: span 2;
   }
 
-  .ods-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+  /* Slide 5: Cartografia */
   .map-layout-deck {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: minmax(360px, 45vh) auto;
+    height: auto;
+    gap: var(--space-md);
   }
 
   .map-side-panel {
-    max-height: 280px;
+    max-height: none;
+    overflow-y: visible;
   }
 
-  .testimonials-deck-layout {
+  .map-points-list {
+    max-height: 240px;
+    overflow-y: auto;
+  }
+
+  .map-photo-thumb-grid {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  /* Slide 6, 7 & 8 */
+  .testimonials-deck-layout,
+  .media-deck-grid,
+  .adapo-deck-layout {
     grid-template-columns: 1fr;
+    height: auto;
+    gap: var(--space-md);
   }
 
   .testimonials-grid-scroll {
-    grid-template-columns: 1fr;
-    max-height: 260px;
-  }
-
-  .media-deck-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .adapo-deck-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-3 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid-4 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    max-height: 380px;
   }
 }
 
-/* Mobile (max-width: 768px) */
+/* ====================================================
+   3. SMARTPHONES & TELAS PEQUENAS (max-width: 768px)
+   ==================================================== */
 @media (max-width: 768px) {
   :root {
     --nav-height: 52px;
+    --space-md: 10px;
+    --space-lg: 14px;
   }
 
   html, body {
-    overflow-y: auto; /* Allow smooth scroll on very small screens if needed */
+    overflow-y: auto !important;
   }
 
+  /* Cabeçalho Fixo Superior */
+  .deck-header {
+    padding: 0 10px;
+  }
+
+  .deck-brand-logo {
+    height: 26px;
+  }
+
+  .deck-brand-name {
+    display: none;
+  }
+
+  .deck-brand-sep {
+    display: none;
+  }
+
+  .nav-deck {
+    margin: 0 6px;
+  }
+
+  .nav-deck-link {
+    padding: 5px 8px;
+    font-size: 10.5px;
+  }
+
+  .nav-deck-idx {
+    display: none;
+  }
+
+  .nav-meta-right {
+    gap: 6px;
+  }
+
+  .btn-screenshot {
+    padding: 5px 8px;
+    height: 30px;
+  }
+
+  .btn-screenshot-label {
+    display: none; /* Mantém apenas o ícone SVG compacto */
+  }
+
+  .deck-slide-indicator {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+
+  /* Slide Base */
   .slide-view {
-    padding: var(--space-md);
+    position: relative;
+    inset: auto;
+    height: auto;
+    min-height: calc(100vh - var(--nav-height));
+    padding: 14px 12px 86px;
+    overflow-y: visible;
+    transform: none !important;
+    transition: opacity var(--transition-fast);
   }
 
+  .slide-view.active {
+    display: block;
+  }
+
+  .slide-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: var(--space-md);
+  }
+
+  .slide-header-right {
+    align-self: flex-start;
+  }
+
+  .slide-category {
+    font-size: 10px;
+  }
+
+  .slide-title {
+    font-size: clamp(1.3rem, 5.5vw, 1.75rem);
+    line-height: 1.2;
+  }
+
+  .slide-subtitle {
+    font-size: 12px;
+  }
+
+  /* Slide 1: Capa / Hero */
   .hero-slide-inner {
-    padding: var(--space-lg) var(--space-md);
+    padding: 12px 6px;
+  }
+
+  .hero-top-badge-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
   }
 
   .hero-title-main {
-    font-size: 1.8rem;
+    font-size: clamp(1.6rem, 6.8vw, 2.2rem);
+    line-height: 1.15;
+  }
+
+  .hero-description-lead {
+    font-size: 12.5px;
+    line-height: 1.45;
   }
 
   .hero-macro-stats {
-    grid-template-columns: 1fr;
-    gap: var(--space-sm);
-  }
-
-  .ods-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .intro-grid,
-  .intro-editorial-layout {
-    grid-template-columns: 1fr;
-    overflow-y: auto;
-    max-height: calc(100vh - 150px);
-    gap: var(--space-sm);
-  }
-
-  .pillar-dual-grid {
     grid-template-columns: 1fr;
     gap: 8px;
   }
 
-  .grid-2, .grid-3, .grid-4 {
+  .hero-showcase-card {
+    max-width: 100%;
+  }
+
+  .showcase-viewport {
+    height: 220px;
+  }
+
+  .hero-bottom-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .btn-hero-start {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Slide 2: Introdução */
+  .intro-pillars-col {
     grid-template-columns: 1fr;
   }
 
-  .diag-strip-strip {
-    grid-template-columns: repeat(2, 1fr);
+  .intro-pillar-card:last-child {
+    grid-column: span 1;
   }
 
+  .pillar-dual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Slide 3: Diagnóstico */
+  .diag-nav-btn-meta {
+    display: none;
+  }
+
+  .diag-indicators-list {
+    max-height: 300px;
+  }
+
+  /* Slide 4: ODS */
+  .ods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ods-card:last-child {
+    grid-column: span 1;
+  }
+
+  /* Slide 5: Cartografia */
+  .map-layout-deck {
+    grid-template-rows: 320px auto;
+  }
+
+  #leaflet-map {
+    min-height: 320px;
+  }
+
+  .map-legend-card {
+    width: 230px;
+  }
+
+  .map-legend-card.is-collapsed {
+    width: auto;
+  }
+
+  .legend-points-scrollable {
+    max-height: 130px;
+  }
+
+  /* Slide 6: Depoimentos */
+  .testimonials-grid-scroll {
+    grid-template-columns: 1fr;
+    max-height: none;
+  }
+
+  /* Botões Flutuantes de Navegação */
   .float-nav-btn {
-    bottom: 16px;
-    padding: 10px 16px;
+    bottom: 14px;
+    padding: 8px 14px;
     font-size: 11px;
+    height: 38px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   }
 
   .float-nav-btn.next {
-    right: 16px;
+    right: 12px;
   }
 
   .float-nav-btn.prev {
-    left: 16px;
+    left: 12px;
   }
 
-  .chart-wrapper {
-    height: 180px;
+  /* Modal Lightbox de Fotos */
+  .map-lightbox-card {
+    max-width: 95vw;
+    max-height: 92vh;
+    padding: 14px;
+  }
+
+  .map-lightbox-img-box {
+    max-height: 50vh;
+  }
+}
+
+/* ====================================================
+   4. TELAS ULTRA PEQUENAS (max-width: 420px)
+   ==================================================== */
+@media (max-width: 420px) {
+  .hero-macro-val {
+    font-size: 24px;
+  }
+
+  .slide-title {
+    font-size: 1.35rem;
+  }
+
+  .showcase-viewport {
+    height: 190px;
+  }
+
+  #leaflet-map {
+    min-height: 280px;
+  }
+
+  .map-legend-dock {
+    margin-left: 6px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .map-legend-card {
+    width: 210px;
+  }
+
+  .float-nav-btn .btn-label {
+    font-size: 10px;
   }
 }

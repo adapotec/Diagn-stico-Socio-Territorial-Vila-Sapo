@@ -79,6 +79,13 @@
       </nav>
 
       <div class="nav-meta-right">
+        <button id="btn-screenshot-deck" class="btn-screenshot" type="button" title="Capturar e baixar imagem da tela atual" aria-label="Capturar tela">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+            <circle cx="12" cy="13" r="4"/>
+          </svg>
+          <span class="btn-screenshot-label">Capturar Tela</span>
+        </button>
         <span class="deck-slide-indicator">1 / 8</span>
       </div>
     </div>
@@ -1281,24 +1288,14 @@
               registros fotográficos de campo.</p>
           </div>
           <div class="slide-header-right">
-            <span class="slide-counter-badge">CartoDB Positron • Leaflet</span>
+            <span class="slide-counter-badge">11 Registros de Campo</span>
           </div>
         </header>
 
         <div class="map-layout-deck">
           <!-- Left: Leaflet Map -->
           <div class="map-viewport-card">
-            <div class="map-coord-banner" id="map-coord-banner">
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span class="map-coord-banner-tag">MODO CAPTURA</span>
-                <span class="map-coord-banner-hint">Clique em qualquer ponto do mapa para copiar a coordenada:</span>
-              </div>
-              <span id="map-coord-banner-val" class="map-coord-banner-val">[-2.536540, -44.236020]</span>
-            </div>
             <div id="leaflet-map" role="region" aria-label="Mapa georreferenciado da Vila Sapo"></div>
-            <div id="map-coord-toast" class="map-coord-toast">
-              <span>📍 Coordenada copiada para o código!</span>
-            </div>
           </div>
 
           <!-- Right: Methodological Observation Note + Guidance -->

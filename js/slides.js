@@ -99,10 +99,12 @@ function updateSlideView(prevIndex) {
     slide.classList.remove('active', 'slide-prev');
     if (idx === currentSlideIndex) {
       slide.classList.add('active');
+      slide.scrollTop = 0;
     } else if (idx < currentSlideIndex) {
       slide.classList.add('slide-prev');
     }
   });
+  window.scrollTo({ top: 0, behavior: 'instant' });
 
   // Update Top Nav Tabs
   navLinks.forEach((link, idx) => {

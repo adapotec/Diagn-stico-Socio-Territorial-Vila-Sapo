@@ -10,6 +10,7 @@ import { initMap } from './map.js';
 import { initCounters } from './counters.js';
 import { initSlides } from './slides.js';
 import { initAudioPlayer } from './audio-player.js';
+import { initScreenshotEngine } from './screenshot.js';
 
 // Import styles
 import 'leaflet/dist/leaflet.css';
@@ -41,6 +42,7 @@ async function init() {
   initMap();
   initCounters();
   initAudioPlayer();
+  initScreenshotEngine();
 
   // Ensure charts and map adjust correctly on startup
   setTimeout(() => {
