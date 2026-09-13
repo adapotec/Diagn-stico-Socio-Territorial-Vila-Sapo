@@ -1039,8 +1039,8 @@ body:has(#slide-diagnostico.active) .float-nav-btn.prev {
 }
 
 .diag-main-stage .diag-strip-item {
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
   border-radius: var(--radius-sm);
   padding: 8px 14px;
   min-height: 52px;
@@ -1065,7 +1065,7 @@ body:has(#slide-diagnostico.active) .float-nav-btn.prev {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #78350F;
+  color: #0F172A;
   line-height: 1;
 }
 
@@ -1100,9 +1100,9 @@ body:has(#slide-diagnostico.active) .float-nav-btn.prev {
 }
 
 .diag-main-stage .diag-strip-text {
-  font-size: 11px;
-  font-weight: 600;
-  color: #4A2810;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #0F172A;
   line-height: 1.25;
 }
 
@@ -1118,19 +1118,19 @@ body:has(#slide-diagnostico.active) .float-nav-btn.prev {
 .diag-main-stage .card {
   background: #FFFFFF;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid #CBD5E1;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
   padding: 14px 16px;
 }
 
 .diag-main-stage .card-header {
-  border-bottom: 1px solid #F1F5F9;
+  border-bottom: 1px solid #E2E8F0;
   padding-bottom: 6px;
   margin-bottom: 8px;
 }
 
 .diag-main-stage .card-title {
-  color: #2B1506;
+  color: #0F172A;
   font-size: 13.5px;
   font-weight: 800;
   letter-spacing: -0.01em;
