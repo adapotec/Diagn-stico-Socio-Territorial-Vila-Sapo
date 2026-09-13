@@ -27,7 +27,7 @@ async function init() {
   if (sourceEl) {
     sourceEl.textContent = data.source === 'google-sheets'
       ? `Dados ao vivo • ${data.totalResponses} respostas consolidadas`
-      : `Censo completo — ${data.totalResponses} famílias entrevistadas`;
+      : `Censo em andamento: famílias mapeadas às margens do Rio Ingaúra`;
   }
 
   const updateEl = document.getElementById('last-update');

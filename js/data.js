@@ -17,6 +17,41 @@ const STATIC_DATA = {
   totalResponses: 21,
   lastUpdate: '2026-09-12',
 
+  // Matriz Geral de Indicadores Socioterritoriais (Pesquisa Ádapo)
+  ivsGeral: {
+    score: 74.7,
+    classificacao: 'Alta Vulnerabilidade',
+    labels: ['Renda & Trabalho', 'Moradia & Drenagem', 'Acesso a Serviços', 'Vulnerabilidade Social', 'Educação'],
+    scores: [76.2, 90.5, 85.7, 76.2, 45.0]
+  },
+
+  ocupacaoTrabalhoGeral: {
+    'Informal / Autônomo': 16,
+    'Aposentado / Beneficiário': 8,
+    'Emprego Formal': 6,
+    'Desempregado': 1
+  },
+
+  escolarizacaoFaixasGeral: {
+    '4 a 6 anos (Pré-escola)': 33.3,
+    '7 a 11 anos (Fund. I)': 85.7,
+    '12 a 14 anos (Fund. II)': 100.0,
+    '15 a 17 anos (Médio)': 100.0
+  },
+
+  dificuldadesGeral: {
+    'Escrita': 66.7,
+    'Leitura': 50.0,
+    'Matemática': 50.0,
+    'Atenção e Emocional': 50.0
+  },
+
+  estudoPandemiaGeral: {
+    'Estudo online / remoto': 11,
+    'Sem acesso pleno': 7,
+    'Estudo parcial': 3
+  },
+
   // [2] Quantas pessoas moram na residência
   pessoasPorResidencia: {
     '1': 2, '2': 5, '3': 2, '4': 5, '5': 5, '6': 1, '8 ou mais': 1

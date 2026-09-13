@@ -7,8 +7,57 @@
 
 /* Tablet (max-width: 1100px) */
 @media (max-width: 1100px) {
+  .hero-split-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    overflow-y: auto;
+    padding: var(--space-md);
+  }
+
+  .hero-showcase-card {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .showcase-viewport {
+    height: 260px;
+  }
+
+  .diag-split-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: var(--space-sm);
+    padding: 0 var(--space-sm);
+  }
+
+  .diag-sidebar {
+    height: auto;
+    max-height: 180px;
+  }
+
+  .diag-sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .diag-territory-widget, .diag-sidebar-footer {
+    display: none;
+  }
+
   .hero-macro-stats {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro-grid,
+  .intro-editorial-layout {
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+    max-height: calc(100vh - 170px);
+    gap: var(--space-md);
+  }
+
+  .pillar-dual-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .ods-grid {
@@ -79,6 +128,19 @@
 
   .ods-grid {
     grid-template-columns: 1fr;
+  }
+
+  .intro-grid,
+  .intro-editorial-layout {
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+    max-height: calc(100vh - 150px);
+    gap: var(--space-sm);
+  }
+
+  .pillar-dual-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .grid-2, .grid-3, .grid-4 {

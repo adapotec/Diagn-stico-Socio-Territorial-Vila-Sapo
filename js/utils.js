@@ -84,6 +84,12 @@ export function chartColors(count) {
   return palette.slice(0, count);
 }
 
+// Convert counts to percentage (1 decimal place)
+export function toPercent(val, total = 21) {
+  if (!total || total === 0) return 0;
+  return Number(((val / total) * 100).toFixed(1));
+}
+
 // Chart.js default config for Institutional Light Mode
 export function getChartDefaults() {
   return {
@@ -111,15 +117,37 @@ export function getChartDefaults() {
         bodyFont: { family: "'Space Mono', monospace", size: 11 },
         displayColors: true,
         boxPadding: 4,
-        boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+        boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+        callbacks: {
+          label: function(context) {
+            const raw = context.raw;
+            const formatted = typeof raw === 'number' ? `${Number(raw.toFixed(1))}%` : raw;
+            if (context.chart.config.type === 'doughnut' || context.chart.config.type === 'pie') {
+              return ` ${context.label}: ${formatted}`;
+            }
+            const dsLabel = context.dataset.label ? `${context.dataset.label}: ` : '';
+            return ` ${dsLabel}${formatted}`;
+          }
+        }
       }
     }
   };
 }
 
-// Get bar chart options
+// Get bar chart options with percentage ticks on value axis
 export function getBarOptions(opts = {}) {
   const defaults = getChartDefaults();
+  const valueTickFormat = {
+    color: '#64748B',
+    font: { size: 10, family: "'Space Mono', monospace" },
+    callback: (val) => `${val}%`
+  };
+  const categoryTickFormat = {
+    color: '#64748B',
+    font: { size: 10, family: "'Space Mono', monospace" },
+    maxRotation: opts.horizontal ? 0 : 45
+  };
+
   return {
     ...defaults,
     indexAxis: opts.horizontal ? 'y' : 'x',
@@ -130,18 +158,12 @@ export function getBarOptions(opts = {}) {
     scales: {
       x: {
         grid: { color: 'rgba(0,0,0,0.06)', drawBorder: false },
-        ticks: {
-          color: '#64748B',
-          font: { size: 10, family: "'Space Mono', monospace" },
-          maxRotation: opts.horizontal ? 0 : 45
-        }
+        ticks: opts.horizontal ? valueTickFormat : categoryTickFormat,
+        beginAtZero: true
       },
       y: {
         grid: { color: 'rgba(0,0,0,0.06)', drawBorder: false },
-        ticks: {
-          color: '#64748B',
-          font: { size: 10, family: "'Space Mono', monospace" }
-        },
+        ticks: opts.horizontal ? categoryTickFormat : valueTickFormat,
         beginAtZero: true
       }
     }
@@ -162,5 +184,37 @@ export function getDoughnutOptions(opts = {}) {
         display: opts.showLegend ?? true
       }
     }
+  };
+}
+
+// Get radar options with percentage ticks
+export function getRadarOptions(opts = {}) {
+  const defaults = getChartDefaults();
+  return {
+    ...defaults,
+    scales: {
+      r: {
+        angleLines: { color: '#E2E8F0' },
+        grid: { color: '#E2E8F0' },
+        pointLabels: {
+          color: '#1E293B',
+          font: { family: "'Inter', sans-serif", size: 10, weight: '700' }
+        },
+        ticks: {
+          backdropColor: 'transparent',
+          color: '#64748B',
+          font: { family: "'Space Mono', monospace", size: 8.5 },
+          callback: (v) => `${v}%`,
+          stepSize: 25
+        },
+        min: 0,
+        max: 100
+      }
+    },
+    plugins: {
+      ...defaults.plugins,
+      legend: { display: false }
+    },
+    ...opts
   };
 }

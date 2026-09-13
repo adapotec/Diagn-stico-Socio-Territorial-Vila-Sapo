@@ -5,6 +5,7 @@
 
 export const SLIDE_NAMES = [
   { id: 'slide-capa', label: 'Capa' },
+  { id: 'slide-introducao', label: 'Introdução' },
   { id: 'slide-diagnostico', label: 'Diagnóstico' },
   { id: 'slide-ods', label: 'ODS ONU' },
   { id: 'slide-mapa', label: 'Cartografia' },
@@ -16,12 +17,45 @@ export const SLIDE_NAMES = [
 let currentSlideIndex = 0;
 let heroCarouselInterval = null;
 let heroCurrentPhoto = 0;
+let isHeroPlaying = true;
 
 const HERO_PHOTOS = [
-  '/fotos/foto-1.jpg',
-  '/fotos/foto-2.jpg',
-  '/fotos/foto-3.jpg',
-  '/fotos/foto-4.jpg',
+  {
+    src: '/fotos/hero-1.jpg',
+    tag: 'CALHA DO RIO INGAÚRA',
+    caption: 'Moradias e palafitas estruturadas diretamente na margem e leito do Rio Ingaúra sob risco permanente de inundação.',
+    location: 'Margens do Rio Ingaúra • Novo Angelim'
+  },
+  {
+    src: '/fotos/hero-2.jpg',
+    tag: 'SANEAMENTO INEXISTENTE',
+    caption: 'Valas de esgoto a céu aberto cortando as passagens das moradias com refluxo direto durante marés e chuvas.',
+    location: 'Setor Central da Vila Sapo'
+  },
+  {
+    src: '/fotos/hero-3.jpg',
+    tag: 'MOBILIDADE & VIAS',
+    caption: 'Pontilhões improvisados de madeira sobre o solo lamacento e vias sem qualquer tipo de pavimentação ou drenagem.',
+    location: 'Acesso Principal à Margem do Rio'
+  },
+  {
+    src: '/fotos/hero-4.jpg',
+    tag: 'VULNERABILIDADE SOCIAL',
+    caption: 'Famílias residentes em área de risco geológico e hídrico permanente às margens do canal fluvial.',
+    location: 'Novo Angelim • São Luís - MA'
+  },
+  {
+    src: '/fotos/hero-5.jpg',
+    tag: 'IMPACTO SOCIOAMBIENTAL',
+    caption: 'Ausência total de coleta e tratamento de resíduos, com acúmulo de entulhos e proliferação de vetores.',
+    location: 'Trecho Intermediário da Ocupação'
+  },
+  {
+    src: '/fotos/hero-6.jpg',
+    tag: 'RESISTÊNCIA COMUNITÁRIA',
+    caption: 'Comunidade mapeada pelo Instituto Ádapo em busca de garantia de direitos e dignidade habitacional.',
+    location: 'Vila Sapo • São Luís - MA'
+  }
 ];
 
 export function initSlides() {
@@ -88,7 +122,8 @@ function updateSlideView(prevIndex) {
 
   // Update Floating Navigation Buttons
   if (prevBtn) {
-    if (currentSlideIndex === 0) {
+    // Hide global floating prev button on Capa (no prev) and on Diagnóstico (sidebar has its own integrated return button)
+    if (currentSlideIndex === 0 || currentSlideIndex === 2) {
       prevBtn.classList.add('hidden');
     } else {
       prevBtn.classList.remove('hidden');
@@ -159,93 +194,180 @@ function setupKeyboardAndTouch() {
   let touchStartX = 0;
   let touchEndX = 0;
 
-  document.addEventListener('touchstart', (e) => {
+  window.addEventListener('touchstart', (e) => {
     touchStartX = e.changedTouches[0].screenX;
   }, { passive: true });
 
-  document.addEventListener('touchend', (e) => {
+  window.addEventListener('touchend', (e) => {
     touchEndX = e.changedTouches[0].screenX;
     const diff = touchStartX - touchEndX;
-    if (Math.abs(diff) > 60) {
+    if (Math.abs(diff) > 50) {
       if (diff > 0) nextSlide();
       else prevSlide();
     }
   }, { passive: true });
 }
 
-// ---------- Hero Dynamic Background Carousel ----------
+// ---------- Hero Dedicated Photo Showcase ----------
 function setupHeroCarousel() {
-  const container = document.getElementById('hero-carousel-track');
-  const dotsContainer = document.getElementById('hero-carousel-dots');
-  if (!container) return;
+  const track = document.getElementById('hero-carousel-track');
+  const thumbsStrip = document.getElementById('hero-carousel-dots');
+  const prevBtn = document.getElementById('showcase-prev-btn');
+  const nextBtn = document.getElementById('showcase-next-btn');
+  const playBtn = document.getElementById('showcase-play-btn');
 
-  // Render slides in carousel track
-  container.innerHTML = HERO_PHOTOS.map((src, idx) => `
-    <div class="hero-bg-photo ${idx === 0 ? 'active' : ''}" style="background-image: url('${src}');" data-index="${idx}"></div>
+  if (!track) return;
+
+  // Render photo slides in track
+  track.innerHTML = HERO_PHOTOS.map((item, idx) => `
+    <div class="showcase-photo-slide ${idx === 0 ? 'active' : ''}" style="background-image: url('${item.src}');" data-index="${idx}"></div>
   `).join('');
 
-  if (dotsContainer) {
-    dotsContainer.innerHTML = HERO_PHOTOS.map((_, idx) => `
-      <button class="hero-carousel-dot ${idx === 0 ? 'active' : ''}" data-index="${idx}" aria-label="Foto ${idx + 1}"></button>
+  // Render thumbnails in strip
+  if (thumbsStrip) {
+    thumbsStrip.innerHTML = HERO_PHOTOS.map((item, idx) => `
+      <button class="showcase-thumb-btn ${idx === 0 ? 'active' : ''}" data-index="${idx}" aria-label="Visualizar Foto ${idx + 1}" style="background-image: url('${item.src}');">
+        <span class="thumb-idx">${idx + 1}</span>
+      </button>
     `).join('');
 
-    dotsContainer.querySelectorAll('.hero-carousel-dot').forEach(dot => {
-      dot.addEventListener('click', (e) => {
-        const idx = parseInt(e.target.dataset.index, 10);
+    thumbsStrip.querySelectorAll('.showcase-thumb-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const targetBtn = e.target.closest('.showcase-thumb-btn');
+        if (!targetBtn) return;
+        const idx = parseInt(targetBtn.dataset.index, 10);
         setHeroPhoto(idx);
       });
     });
   }
 
+  // Navigation arrows
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const prevIdx = (heroCurrentPhoto - 1 + HERO_PHOTOS.length) % HERO_PHOTOS.length;
+      setHeroPhoto(prevIdx);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const nextIdx = (heroCurrentPhoto + 1) % HERO_PHOTOS.length;
+      setHeroPhoto(nextIdx);
+    });
+  }
+
+  // Play/Pause button
+  if (playBtn) {
+    playBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      isHeroPlaying = !isHeroPlaying;
+      if (isHeroPlaying) {
+        startHeroCarouselTimer();
+        playBtn.innerHTML = '<span class="play-icon">⏸</span>';
+        playBtn.setAttribute('title', 'Pausar rotação');
+      } else {
+        clearInterval(heroCarouselInterval);
+        playBtn.innerHTML = '<span class="play-icon">▶</span>';
+        playBtn.setAttribute('title', 'Reproduzir rotação automática');
+      }
+    });
+  }
+
+  // Start auto timer
   startHeroCarouselTimer();
 
-  // Pause on hover
-  container.addEventListener('mouseenter', () => clearInterval(heroCarouselInterval));
-  container.addEventListener('mouseleave', () => startHeroCarouselTimer());
+  // Set initial text
+  setHeroPhoto(0);
 }
 
 function setHeroPhoto(index) {
   heroCurrentPhoto = index;
-  const photos = document.querySelectorAll('.hero-bg-photo');
-  const dots = document.querySelectorAll('.hero-carousel-dot');
+  const photos = document.querySelectorAll('.showcase-photo-slide');
+  const thumbs = document.querySelectorAll('.showcase-thumb-btn');
+  const indexEl = document.getElementById('hero-photo-index');
+  const totalEl = document.getElementById('hero-photo-total');
+  const captionEl = document.getElementById('showcase-caption-text');
+  const tagEl = document.querySelector('.showcase-caption-tag');
 
   photos.forEach((photo, idx) => {
     photo.classList.toggle('active', idx === heroCurrentPhoto);
   });
 
-  dots.forEach((dot, idx) => {
-    dot.classList.toggle('active', idx === heroCurrentPhoto);
+  thumbs.forEach((thumb, idx) => {
+    thumb.classList.toggle('active', idx === heroCurrentPhoto);
   });
+
+  if (indexEl) indexEl.textContent = String(heroCurrentPhoto + 1).padStart(2, '0');
+  if (totalEl) totalEl.textContent = String(HERO_PHOTOS.length).padStart(2, '0');
+
+  const photoData = HERO_PHOTOS[heroCurrentPhoto];
+  if (photoData) {
+    if (captionEl) captionEl.textContent = photoData.caption;
+    if (tagEl) tagEl.textContent = photoData.tag;
+  }
 }
 
 function startHeroCarouselTimer() {
   clearInterval(heroCarouselInterval);
+  if (!isHeroPlaying) return;
   heroCarouselInterval = setInterval(() => {
     const nextIdx = (heroCurrentPhoto + 1) % HERO_PHOTOS.length;
     setHeroPhoto(nextIdx);
   }, 5000);
 }
 
-// ---------- Diagnóstico Slide Sub-tabs ----------
+// ---------- Diagnóstico Slide Sidebar Sub-tabs ----------
 function setupDiagnosticoSubtabs() {
   const tabButtons = document.querySelectorAll('.diag-subtab-btn');
   const tabPanels = document.querySelectorAll('.diag-panel');
+  const activeTitleEl = document.getElementById('diag-active-topic-title');
+  const activeDescEl = document.getElementById('diag-active-topic-desc');
+
+  // Quick navigation in sidebar
+  const sidebarPrevBtn = document.getElementById('diag-prev-slide-btn');
+  const sidebarHomeBtn = document.getElementById('diag-home-slide-btn');
+  const sidebarNextBtn = document.getElementById('diag-next-slide-btn');
+  const sidebarReturnBtn = document.getElementById('diag-sidebar-return-btn');
+
+  if (sidebarPrevBtn) sidebarPrevBtn.addEventListener('click', prevSlide);
+  if (sidebarHomeBtn) sidebarHomeBtn.addEventListener('click', () => goToSlide(0));
+  if (sidebarNextBtn) sidebarNextBtn.addEventListener('click', nextSlide);
+  if (sidebarReturnBtn) {
+    sidebarReturnBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      goToSlide(1);
+    });
+  }
 
   tabButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       const targetId = btn.dataset.panel;
-      
-      tabButtons.forEach(b => b.classList.remove('active'));
+      const topicTitle = btn.dataset.title || btn.querySelector('.subtab-name')?.textContent || 'DIAGNÓSTICO';
+      const topicDesc = btn.dataset.desc || '';
+
+      tabButtons.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
       tabPanels.forEach(p => p.classList.remove('active'));
 
       btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+
       const targetPanel = document.getElementById(targetId);
       if (targetPanel) {
         targetPanel.classList.add('active');
       }
 
+      // Update sidebar active topic footer info
+      if (activeTitleEl) activeTitleEl.textContent = topicTitle;
+      if (activeDescEl && topicDesc) activeDescEl.textContent = topicDesc;
+
       // Trigger chart resize for newly visible panel
       window.dispatchEvent(new Event('resize'));
+      setTimeout(() => window.dispatchEvent(new Event('resize')), 150);
     });
   });
 }
