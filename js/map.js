@@ -639,3 +639,57 @@ export function initMap() {
 
   return map;
 }
+
+// ================================================
+// MINI MAPA ESTÁTICO (SLIDE DIAGNÓSTICO // SIDEBAR)
+// Exibe apenas o recorte territorial e o perímetro
+// Sem controles de edição, arrasto ou zoom (read-only)
+// ================================================
+let miniMapInstance = null;
+
+export function initMiniMap() {
+  const container = document.getElementById('diag-mini-map');
+  if (!container) return null;
+
+  if (miniMapInstance) {
+    miniMapInstance.remove();
+    miniMapInstance = null;
+  }
+
+  const miniMap = L.map('diag-mini-map', {
+    center: VILA_SAPO_CENTER,
+    zoom: 16,
+    zoomControl: false,
+    attributionControl: false,
+    dragging: false,
+    scrollWheelZoom: false,
+    doubleClickZoom: false,
+    boxZoom: false,
+    keyboard: false,
+    touchZoom: false,
+  });
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+  }).addTo(miniMap);
+
+  const polygon = L.polygon(VILA_SAPO_PERIMETER_COORDS, {
+    color: '#E86C1D',
+    fillColor: '#E86C1D',
+    fillOpacity: 0.32,
+    weight: 2.5,
+    dashArray: '5, 4',
+    interactive: false,
+  }).addTo(miniMap);
+
+  miniMap.fitBounds(polygon.getBounds(), {
+    padding: [10, 10],
+  });
+
+  setTimeout(() => miniMap.invalidateSize(), 400);
+  window.addEventListener('resize', () => miniMap.invalidateSize());
+
+  miniMapInstance = miniMap;
+  return miniMap;
+}
+

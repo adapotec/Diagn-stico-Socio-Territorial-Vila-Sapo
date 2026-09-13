@@ -6,7 +6,7 @@
 
 import { getData } from './data.js';
 import { initCharts } from './charts.js';
-import { initMap } from './map.js';
+import { initMap, initMiniMap } from './map.js';
 import { initCounters } from './counters.js';
 import { initSlides } from './slides.js';
 import { initAudioPlayer } from './audio-player.js';
@@ -40,6 +40,7 @@ async function init() {
   initSlides();
   initCharts();
   initMap();
+  initMiniMap();
   initCounters();
   initAudioPlayer();
   initScreenshotEngine();
