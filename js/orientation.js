@@ -139,23 +139,15 @@ function shouldShowOrientationPrompt() {
 function showOverlay() {
   const overlay = document.getElementById('orientation-overlay');
   if (!overlay) return;
-
-  overlay.style.display = 'flex';
-  // Reflow para disparar transição de opacidade
-  overlay.offsetHeight;
+  overlay.classList.remove('is-dismissed');
   overlay.classList.add('is-visible');
 }
 
 function hideOverlay() {
   const overlay = document.getElementById('orientation-overlay');
   if (!overlay) return;
-
   overlay.classList.remove('is-visible');
-  setTimeout(() => {
-    if (!overlay.classList.contains('is-visible')) {
-      overlay.style.display = 'none';
-    }
-  }, 300);
+  overlay.classList.add('is-dismissed');
 }
 
 function setupOrientationOverlay() {
@@ -164,6 +156,11 @@ function setupOrientationOverlay() {
   const btnDismiss = document.getElementById('btn-orientation-dismiss');
 
   if (!overlay) return;
+
+  // Se já dispensado nesta sessão, adiciona classe is-dismissed de imediato
+  if (sessionStorage.getItem(STORAGE_KEY) === 'true') {
+    overlay.classList.add('is-dismissed');
+  }
 
   // Botão primário: Entrar em Tela Cheia & Paisagem
   if (btnFullscreen) {
@@ -179,12 +176,6 @@ function setupOrientationOverlay() {
       sessionStorage.setItem(STORAGE_KEY, 'true');
       hideOverlay();
     });
-  }
-
-  // Avaliação inicial
-  if (shouldShowOrientationPrompt()) {
-    // Pequeno delay para a página renderizar primeiro
-    setTimeout(showOverlay, 600);
   }
 }
 

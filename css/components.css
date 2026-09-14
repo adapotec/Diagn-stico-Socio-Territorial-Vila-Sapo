@@ -2785,7 +2785,7 @@ body:has(#slide-diagnostico.active) .float-nav-btn.prev {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   padding: 18px;
@@ -2794,9 +2794,25 @@ body:has(#slide-diagnostico.active) .float-nav-btn.prev {
   transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.orientation-overlay.is-visible {
-  opacity: 1;
-  pointer-events: auto;
+/* Exibição automática e imediata em smartphones em modo retrato */
+@media (orientation: portrait) and (max-width: 920px) {
+  .orientation-overlay:not(.is-dismissed) {
+    display: flex !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+}
+
+.orientation-overlay.is-visible:not(.is-dismissed) {
+  display: flex !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.orientation-overlay.is-dismissed {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .orientation-backdrop {

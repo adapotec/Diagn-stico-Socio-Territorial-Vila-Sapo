@@ -156,7 +156,9 @@ function updateSlideView(prevIndex) {
 
   // Window resize event to adjust Chart.js and Leaflet immediately and post-transition
   window.dispatchEvent(new Event('resize'));
-  setTimeout(() => window.dispatchEvent(new Event('resize')), 200);
+  setTimeout(() => window.dispatchEvent(new Event('resize')), 60);
+  setTimeout(() => window.dispatchEvent(new Event('resize')), 250);
+  setTimeout(() => window.dispatchEvent(new Event('resize')), 500);
 }
 
 function setupSlideNavigation() {

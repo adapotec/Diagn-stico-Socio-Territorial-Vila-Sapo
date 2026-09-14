@@ -282,29 +282,49 @@
   }
 
   /* Cabeçalho Fixo Superior */
-  .deck-header {
-    padding: 0 10px;
+  .main-nav {
+    padding: 0 8px;
   }
 
-  .deck-brand-logo {
+  .nav-container {
+    padding: 0 4px;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .nav-brand img {
     height: 26px;
   }
 
-  .deck-brand-name {
+  .nav-brand-text {
+    display: none; /* Deixa apenas a logo para liberar espaço */
+  }
+
+  header.main-nav nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex: 1;
+    min-width: 0;
+    margin: 0 4px;
+  }
+
+  header.main-nav nav::-webkit-scrollbar {
     display: none;
   }
 
-  .deck-brand-sep {
-    display: none;
-  }
-
-  .nav-deck {
-    margin: 0 6px;
+  .nav-deck-links {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
   }
 
   .nav-deck-link {
     padding: 5px 8px;
     font-size: 10.5px;
+    white-space: nowrap;
   }
 
   .nav-deck-idx {
@@ -312,7 +332,10 @@
   }
 
   .nav-meta-right {
-    gap: 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
   }
 
   .btn-fullscreen,
@@ -430,8 +453,62 @@
   }
 
   /* Slide 3: Diagnóstico */
+  .diag-split-layout {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+    gap: 12px;
+  }
+
+  .diag-sidebar {
+    height: auto;
+    max-height: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border-default);
+    padding: 10px;
+  }
+
+  .diag-sidebar-nav {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 6px;
+    padding-bottom: 4px;
+    width: 100%;
+  }
+
+  .diag-sidebar-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .diag-subtab-btn {
+    white-space: nowrap;
+    padding: 6px 10px;
+    flex-shrink: 0;
+    width: auto;
+  }
+
   .diag-nav-btn-meta {
     display: none;
+  }
+
+  .diag-main-stage {
+    height: auto;
+    overflow-y: visible;
+  }
+
+  .diag-main-stage .diag-summary-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .diag-panel .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .diag-indicators-list {
@@ -449,11 +526,28 @@
 
   /* Slide 5: Cartografia */
   .map-layout-deck {
-    grid-template-rows: 320px auto;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 14px;
+  }
+
+  .map-viewport-card {
+    height: 360px;
+    min-height: 360px;
+    width: 100%;
   }
 
   #leaflet-map {
-    min-height: 320px;
+    height: 100%;
+    min-height: 360px;
+    width: 100%;
+  }
+
+  .map-side-panel {
+    height: auto;
+    max-height: none;
+    overflow-y: visible;
   }
 
   .map-legend-card {

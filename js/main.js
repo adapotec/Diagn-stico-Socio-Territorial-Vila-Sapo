@@ -21,31 +21,41 @@ import '../css/sections.css';
 import '../css/responsive.css';
 
 async function init() {
-  // Load data
-  const data = await getData();
-
-  // Update data source indicators
-  const sourceEl = document.getElementById('data-source-text');
-  if (sourceEl) {
-    sourceEl.textContent = data.source === 'google-sheets'
-      ? `Dados ao vivo • ${data.totalResponses} respostas consolidadas`
-      : `Censo em andamento: famílias mapeadas às margens do Rio Ingaúra`;
+  // Initialize Orientation & Fullscreen mode immediately on DOM ready
+  try {
+    initOrientationAndFullscreen();
+  } catch (err) {
+    console.warn('[Orientation] Init warning:', err);
   }
 
-  const updateEl = document.getElementById('last-update');
-  if (updateEl) {
-    updateEl.textContent = `Atualizado em ${data.lastUpdate}`;
+  // Load data
+  try {
+    const data = await getData();
+
+    // Update data source indicators
+    const sourceEl = document.getElementById('data-source-text');
+    if (sourceEl) {
+      sourceEl.textContent = data.source === 'google-sheets'
+        ? `Dados ao vivo • ${data.totalResponses} respostas consolidadas`
+        : `Censo em andamento: famílias mapeadas às margens do Rio Ingaúra`;
+    }
+
+    const updateEl = document.getElementById('last-update');
+    if (updateEl) {
+      updateEl.textContent = `Atualizado em ${data.lastUpdate}`;
+    }
+  } catch (err) {
+    console.warn('[Data] Erro ao carregar dados:', err);
   }
 
   // Initialize Slide Deck System & Components
-  initSlides();
-  initCharts();
-  initMap();
-  initMiniMap();
-  initCounters();
-  initAudioPlayer();
-  initScreenshotEngine();
-  initOrientationAndFullscreen();
+  try { initSlides(); } catch (e) { console.warn('[Slides]', e); }
+  try { initCharts(); } catch (e) { console.warn('[Charts]', e); }
+  try { initMap(); } catch (e) { console.warn('[Map]', e); }
+  try { initMiniMap(); } catch (e) { console.warn('[MiniMap]', e); }
+  try { initCounters(); } catch (e) { console.warn('[Counters]', e); }
+  try { initAudioPlayer(); } catch (e) { console.warn('[AudioPlayer]', e); }
+  try { initScreenshotEngine(); } catch (e) { console.warn('[Screenshot]', e); }
 
   // Ensure charts and map adjust correctly on startup
   setTimeout(() => {
