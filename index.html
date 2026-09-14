@@ -1472,6 +1472,12 @@
               <p class="audio-subtitle">Depoimento gravado em campo com moradora da Vila Sapo narrando a rotina, o isolamento e as perdas na calha do rio.</p>
             </div>
 
+            <!-- Embedded HTML5 Audio with multiple source formats -->
+            <audio id="field-audio-element" preload="metadata" crossorigin="anonymous" playsinline style="display:none;">
+              <source src="/audio/depoimento.ogg" type="audio/ogg; codecs=opus">
+              <source src="/audio/depoimento.mp3" type="audio/mpeg">
+            </audio>
+
             <div class="audio-main-controls">
               <button id="audio-play-btn" class="audio-play-btn" aria-label="Reproduzir depoimento em áudio">
                 <svg class="audio-play-icon" viewBox="0 0 24 24">
