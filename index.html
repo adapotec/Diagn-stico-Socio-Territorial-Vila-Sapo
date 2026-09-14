@@ -1461,11 +1461,15 @@
 
           <!-- Right: Institutional Audio Player -->
           <div class="audio-player-card">
+            <div class="audio-anonymizer-pill">
+              <span class="anonymizer-dot"></span>
+              <span>VOZ ANONIMIZADA // PRESERVAÇÃO DE IDENTIDADE</span>
+            </div>
+
             <div class="audio-header">
               <span class="audio-tag">REGISTRO SONORO DE CAMPO</span>
-              <h3 class="audio-title">Relato de Moradora</h3>
-              <p class="audio-subtitle">Depoimento gravado durante as incursões de campo do diagnóstico territorial na
-                calha do Rio Ingaúra.</p>
+              <h3 class="audio-title">Relato Direto da Comunidade</h3>
+              <p class="audio-subtitle">Depoimento gravado em campo com moradora da Vila Sapo narrando a rotina, o isolamento e as perdas na calha do rio.</p>
             </div>
 
             <div class="audio-main-controls">
@@ -1489,13 +1493,25 @@
 
                 <div class="audio-time-row">
                   <span id="audio-time-current">00:00</span>
-                  <span id="audio-time-total">02:45</span>
+                  <span id="audio-time-total">00:00</span>
                 </div>
               </div>
             </div>
 
+            <!-- Anonymizer FX Controls -->
+            <div class="audio-fx-bar">
+              <div class="audio-fx-info">
+                <span class="audio-fx-title">Filtro de Anonimização Vocal</span>
+                <span class="audio-fx-subtitle" id="audio-fx-desc">Modulação acústica de segurança ativada</span>
+              </div>
+              <button id="audio-fx-toggle-btn" class="audio-fx-toggle-btn active" type="button" aria-pressed="true" title="Alternar filtro de proteção de voz">
+                <span class="fx-toggle-indicator"></span>
+                <span id="audio-fx-btn-text">Filtro Ativo</span>
+              </button>
+            </div>
+
             <div class="audio-notice-box">
-              <strong>Como reproduzir o áudio oficial:</strong> Coloque o arquivo de áudio nomeado exatamente como <code>depoimento.mp3</code> na pasta <code>public/audio/</code> (caminho: <code>public/audio/depoimento.mp3</code>). O reprodutor detecta automaticamente o arquivo, calcula a duração e executa com controles de play, pause e barra de progresso.
+              <strong>Protocolo de Preservação & Ética:</strong> Em conformidade com as diretrizes de pesquisa e proteção à integridade das famílias, a voz da moradora é reproduzida com <em>modulação de frequência e filtro de formantes</em> via Web Audio API para salvaguardar sua segurança pessoal sem comprometer a compreensão das palavras.
             </div>
           </div>
         </div>
