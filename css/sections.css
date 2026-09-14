@@ -230,6 +230,60 @@
   background: var(--success);
 }
 
+/* ============================================================
+   GLOBAL ORANGE AMBIENCE — All Slides Except Capa (#slide-capa)
+   Assinatura Terracota Institucional Ádapo (Mesmo tom do Diagnóstico)
+   ============================================================ */
+.slide-view:not(#slide-capa) {
+  background: linear-gradient(135deg, #DE7028 0%, #C95B16 100%) !important;
+}
+
+/* Header legibility on orange background */
+.slide-view:not(#slide-capa) .slide-header {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3) !important;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-xs);
+}
+
+.slide-view:not(#slide-capa) .slide-category {
+  color: #FFFFFF !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.slide-view:not(#slide-capa) .slide-title {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.slide-view:not(#slide-capa) .slide-subtitle {
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.slide-view:not(#slide-capa) .slide-counter-badge {
+  background: rgba(255, 255, 255, 0.22) !important;
+  border: 1px solid rgba(255, 255, 255, 0.45) !important;
+  color: #FFFFFF !important;
+}
+
+/* Floating Navigation Buttons contrast adjustment */
+body:has(.slide-view:not(#slide-capa).active) .float-nav-btn {
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
+}
+
+body:has(.slide-view:not(#slide-capa).active) .float-nav-btn:hover {
+  background: #0F172A !important;
+  color: #FFFFFF !important;
+}
+
 /* ---------- SLIDE 2: Introdução & Contexto ---------- */
 #slide-introducao .slide-container {
   height: 100%;

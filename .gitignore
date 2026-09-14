@@ -7,3 +7,8 @@ Thumbs.db
 .env.local
 __pycache__/
 *.pyc
+
+# Raw source folders (processed into public/)
+fotos vila sapo/
+Icones ODS/
+Na midia/

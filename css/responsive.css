@@ -249,9 +249,14 @@
 
   /* Slide 6, 7 & 8 */
   .testimonials-deck-layout,
-  .media-deck-grid,
   .adapo-deck-layout {
     grid-template-columns: 1fr;
+    height: auto;
+    gap: var(--space-md);
+  }
+
+  .media-deck-grid {
+    grid-template-columns: repeat(2, 1fr);
     height: auto;
     gap: var(--space-md);
   }
@@ -461,8 +466,13 @@
     max-height: 130px;
   }
 
-  /* Slide 6: Depoimentos */
+  /* Slide 6 & 7: Depoimentos & Na Mídia */
   .testimonials-grid-scroll {
+    grid-template-columns: 1fr;
+    max-height: none;
+  }
+
+  .media-deck-grid {
     grid-template-columns: 1fr;
     max-height: none;
   }

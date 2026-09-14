@@ -1,0 +1,8 @@
+Para adicionar o relato em áudio oficial da comunidade:
+1. Adicione o seu arquivo de áudio neste diretório com o nome exato:
+   depoimento.mp3
+
+Caminho completo:
+public/audio/depoimento.mp3
+
+O player de áudio no Slide 6 (Depoimentos & Memória Oral) identificará o arquivo automaticamente, carregará a duração exata e habilitará a reprodução e controle de tempo.
