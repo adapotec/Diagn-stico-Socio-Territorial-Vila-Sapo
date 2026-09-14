@@ -1,7 +1,8 @@
 // ================================================
 // AUDIO PLAYER COMPONENT — Vozes da Vila Sapo
 // Institutional Audio Player for Community Testimonial
-// Broadcast-Grade Voice Anonymization & Identity Shield (Web Audio API)
+// Permanent Broadcast-Grade Voice Anonymization (Web Audio API)
+// Irreversible & non-deactivable filter for resident protection
 // Full 5+ minutes playback support (/audio/depoimento.ogg & /audio/depoimento.mp3)
 // ================================================
 
@@ -12,13 +13,10 @@ export function initAudioPlayer() {
   const timeCurrent = document.getElementById('audio-time-current');
   const timeTotal = document.getElementById('audio-time-total');
   const audioStatus = document.getElementById('audio-status-label');
-  const fxToggleBtn = document.getElementById('audio-fx-toggle-btn');
-  const fxBtnText = document.getElementById('audio-fx-btn-text');
-  const fxDesc = document.getElementById('audio-fx-desc');
 
   if (!playBtn) return;
 
-  // Retrieve audio element from DOM or create fallback
+  // Retrieve audio element from DOM or fallback
   let audio = document.getElementById('field-audio-element');
   if (!audio) {
     audio = new Audio();
@@ -29,13 +27,16 @@ export function initAudioPlayer() {
     document.body.appendChild(audio);
   }
 
+  // Strictly enforce voice pitch reduction and non-preservation
+  audio.preservesPitch = false;
+  audio.playbackRate = 0.84;
+
   let isAudioLoaded = false;
   let simulatedTimer = null;
   let simulatedTime = 0;
   const simulatedDuration = 312; // 5 min 12 sec
 
-  // Voice Anonymization Graph State
-  let isAnonActive = true;
+  // Web Audio API State
   let audioCtx = null;
   let sourceNode = null;
   let filterHighpass = null;
@@ -46,7 +47,6 @@ export function initAudioPlayer() {
   let modGain = null;
   let waveShaper = null;
   let gainFx = null;
-  let gainDry = null;
   let isGraphConnected = false;
 
   // Format MM:SS helper
@@ -57,7 +57,7 @@ export function initAudioPlayer() {
     return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
   };
 
-  // Distortion curve for electronic voice masking
+  // Electronic voice masking curve
   function makeDistortionCurve(amount = 28) {
     const n_samples = 44100;
     const curve = new Float32Array(n_samples);
@@ -69,7 +69,7 @@ export function initAudioPlayer() {
     return curve;
   }
 
-  // Set up Broadcast-Grade Web Audio API Anonymization Graph
+  // Setup Mandatory, Non-Bypassable Voice Anonymization Graph
   function setupWebAudioGraph() {
     if (isGraphConnected) return;
 
@@ -124,12 +124,9 @@ export function initAudioPlayer() {
       waveShaper.curve = makeDistortionCurve(28);
       waveShaper.oversample = '4x';
 
-      // 5. Wet (FX) and Dry (Original) Gain Routing
+      // 5. Output Gain (Strictly masked signal ONLY — Dry path does not exist)
       gainFx = audioCtx.createGain();
       gainFx.gain.setValueAtTime(1.0, audioCtx.currentTime);
-
-      gainDry = audioCtx.createGain();
-      gainDry.gain.setValueAtTime(0.0, audioCtx.currentTime); // Zero by default
 
       // FX Chain: source -> Highpass -> Lowpass -> Formant -> modGain -> waveShaper -> gainFx -> destination
       sourceNode.connect(filterHighpass);
@@ -140,61 +137,9 @@ export function initAudioPlayer() {
       waveShaper.connect(gainFx);
       gainFx.connect(audioCtx.destination);
 
-      // Dry Chain (connected only when user deliberately switches to original voice):
-      sourceNode.connect(gainDry);
-      gainDry.connect(audioCtx.destination);
-
       isGraphConnected = true;
-      applyAnonState();
     } catch (err) {
       console.warn('Web Audio Graph initialization note:', err);
-    }
-  }
-
-  function applyAnonState() {
-    if (isAnonActive) {
-      // Voice Anonymization ACTIVE:
-      // Deeper pitch and altered cadence
-      audio.preservesPitch = false;
-      audio.playbackRate = 0.84;
-
-      if (gainFx && audioCtx) {
-        gainFx.gain.setValueAtTime(1.0, audioCtx.currentTime);
-      }
-      if (gainDry && audioCtx) {
-        gainDry.gain.setValueAtTime(0.0, audioCtx.currentTime);
-      }
-
-      if (fxToggleBtn) {
-        fxToggleBtn.classList.add('active');
-        fxToggleBtn.setAttribute('aria-pressed', 'true');
-      }
-      if (fxBtnText) fxBtnText.textContent = 'Filtro Ativo';
-      if (fxDesc) fxDesc.textContent = 'Modulação de proteção vocal ativa (Scrambler 54Hz + Formante)';
-      if (!audio.paused && audioStatus) {
-        audioStatus.textContent = 'REPRODUZINDO (VOZ ANONIMIZADA // PROTEGIDA)';
-      }
-    } else {
-      // Original Natural Voice:
-      audio.preservesPitch = true;
-      audio.playbackRate = 1.0;
-
-      if (gainFx && audioCtx) {
-        gainFx.gain.setValueAtTime(0.0, audioCtx.currentTime);
-      }
-      if (gainDry && audioCtx) {
-        gainDry.gain.setValueAtTime(1.0, audioCtx.currentTime);
-      }
-
-      if (fxToggleBtn) {
-        fxToggleBtn.classList.remove('active');
-        fxToggleBtn.setAttribute('aria-pressed', 'false');
-      }
-      if (fxBtnText) fxBtnText.textContent = 'Voz Original';
-      if (fxDesc) fxDesc.textContent = 'Áudio natural sem filtros';
-      if (!audio.paused && audioStatus) {
-        audioStatus.textContent = 'REPRODUZINDO (ÁUDIO ORIGINAL)';
-      }
     }
   }
 
@@ -207,12 +152,19 @@ export function initAudioPlayer() {
   // Audio lifecycle events
   audio.addEventListener('loadedmetadata', () => {
     isAudioLoaded = true;
+    audio.preservesPitch = false;
+    audio.playbackRate = 0.84;
     if (timeTotal && !isNaN(audio.duration) && isFinite(audio.duration)) {
       timeTotal.textContent = formatTime(audio.duration);
     }
     if (audioStatus && audio.paused) {
-      audioStatus.textContent = 'DEPOIMENTO EM ÁUDIO PRONTO';
+      audioStatus.textContent = 'DEPOIMENTO EM ÁUDIO PRONTO (VOZ PROTEGIDA)';
     }
+  });
+
+  audio.addEventListener('play', () => {
+    audio.preservesPitch = false;
+    audio.playbackRate = 0.84;
   });
 
   audio.addEventListener('canplaythrough', () => {
@@ -252,13 +204,16 @@ export function initAudioPlayer() {
       console.warn('AudioContext gesture error:', err);
     }
 
+    audio.preservesPitch = false;
+    audio.playbackRate = 0.84;
+
     if (isAudioLoaded || audio.readyState >= 2) {
       if (audio.paused) {
         audio.play().then(() => {
           playBtn.classList.add('playing');
           playBtn.setAttribute('aria-label', 'Pausar depoimento');
           if (audioStatus) {
-            audioStatus.textContent = isAnonActive ? 'REPRODUZINDO (VOZ ANONIMIZADA // PROTEGIDA)' : 'REPRODUZINDO (ÁUDIO ORIGINAL)';
+            audioStatus.textContent = 'REPRODUZINDO (VOZ ANONIMIZADA // PROTEGIDA)';
           }
         }).catch(() => {
           toggleSimulation();
@@ -275,7 +230,7 @@ export function initAudioPlayer() {
         playBtn.classList.add('playing');
         playBtn.setAttribute('aria-label', 'Pausar depoimento');
         if (audioStatus) {
-          audioStatus.textContent = isAnonActive ? 'REPRODUZINDO (VOZ ANONIMIZADA // PROTEGIDA)' : 'REPRODUZINDO (ÁUDIO ORIGINAL)';
+          audioStatus.textContent = 'REPRODUZINDO (VOZ ANONIMIZADA // PROTEGIDA)';
         }
       }).catch(() => {
         toggleSimulation();
@@ -283,35 +238,19 @@ export function initAudioPlayer() {
     }
   });
 
-  // Toggle Voice Anonymization Filter
-  if (fxToggleBtn) {
-    fxToggleBtn.addEventListener('click', async () => {
-      isAnonActive = !isAnonActive;
-      try {
-        setupWebAudioGraph();
-        if (audioCtx && audioCtx.state === 'suspended') {
-          await audioCtx.resume();
-        }
-      } catch (err) {
-        console.warn('AudioContext error on toggle:', err);
-      }
-      applyAnonState();
-    });
-  }
-
   // Simulation Fallback if real audio file cannot be loaded
   function toggleSimulation() {
     if (simulatedTimer) {
       clearInterval(simulatedTimer);
       simulatedTimer = null;
       playBtn.classList.remove('playing');
-      playBtn.setAttribute('aria-label', 'Reproduzir depoimento');
-      if (audioStatus) audioStatus.textContent = 'DEPOIMENTO EM ÁUDIO PRONTO';
+      playBtn.setAttribute('aria-label', 'Pausar depoimento');
+      if (audioStatus) audioStatus.textContent = 'DEPOIMENTO EM ÁUDIO PRONTO (VOZ PROTEGIDA)';
     } else {
       playBtn.classList.add('playing');
       playBtn.setAttribute('aria-label', 'Pausar depoimento');
       if (audioStatus) {
-        audioStatus.textContent = isAnonActive ? 'SIMULAÇÃO (VOZ ANONIMIZADA)' : 'SIMULAÇÃO DE ÁUDIO';
+        audioStatus.textContent = 'SIMULAÇÃO (VOZ ANONIMIZADA // PROTEGIDA)';
       }
       if (timeTotal) timeTotal.textContent = formatTime(simulatedDuration);
       simulatedTimer = setInterval(() => {
@@ -321,7 +260,7 @@ export function initAudioPlayer() {
           clearInterval(simulatedTimer);
           simulatedTimer = null;
           playBtn.classList.remove('playing');
-          if (audioStatus) audioStatus.textContent = 'DEPOIMENTO EM ÁUDIO PRONTO';
+          if (audioStatus) audioStatus.textContent = 'DEPOIMENTO EM ÁUDIO PRONTO (VOZ PROTEGIDA)';
         }
         if (timeCurrent) timeCurrent.textContent = formatTime(simulatedTime);
         if (progressFill) {
