@@ -11,6 +11,7 @@ import { initCounters } from './counters.js';
 import { initSlides } from './slides.js';
 import { initAudioPlayer } from './audio-player.js';
 import { initScreenshotEngine } from './screenshot.js';
+import { initOrientationAndFullscreen } from './orientation.js';
 
 // Import styles
 import 'leaflet/dist/leaflet.css';
@@ -44,6 +45,7 @@ async function init() {
   initCounters();
   initAudioPlayer();
   initScreenshotEngine();
+  initOrientationAndFullscreen();
 
   // Ensure charts and map adjust correctly on startup
   setTimeout(() => {

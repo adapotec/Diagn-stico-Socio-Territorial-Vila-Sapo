@@ -2741,3 +2741,323 @@ body:has(#slide-diagnostico.active) .float-nav-btn.prev {
   to { transform: rotate(360deg); }
 }
 
+/* ---------- Global Fullscreen Toggle Button ---------- */
+.btn-fullscreen {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  color: var(--text-secondary);
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 32px;
+  white-space: nowrap;
+}
+
+.btn-fullscreen:hover {
+  background: var(--brand-orange-subtle);
+  border-color: var(--brand-orange);
+  color: var(--brand-orange-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-xs);
+}
+
+.btn-fullscreen:active {
+  transform: translateY(0);
+}
+
+.btn-fullscreen[aria-pressed="true"] {
+  background: var(--brand-orange-subtle);
+  border-color: var(--brand-orange);
+  color: var(--brand-orange);
+}
+
+/* ====================================================
+   ORIENTATION & FULLSCREEN OVERLAY (BI DASHBOARD MODE)
+   ==================================================== */
+.orientation-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.orientation-overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.orientation-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 17, 32, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.orientation-card {
+  position: relative;
+  z-index: 2;
+  background: #0F172A;
+  border: 1px solid rgba(232, 108, 29, 0.45);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75), 0 0 35px rgba(232, 108, 29, 0.15);
+  border-radius: 12px;
+  max-width: 440px;
+  width: 100%;
+  padding: 30px 22px 24px;
+  text-align: center;
+  color: #F8FAFC;
+  box-sizing: border-box;
+}
+
+.orientation-visual-area {
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 22px;
+}
+
+/* Mockup de Celular com Giro Animado */
+.orientation-device-mockup {
+  width: 52px;
+  height: 94px;
+  background: #1E293B;
+  border: 2.5px solid rgba(248, 250, 252, 0.9);
+  border-radius: 9px;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px;
+  box-sizing: border-box;
+  animation: phoneRotateCycle 3.6s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+.orientation-device-speaker {
+  width: 14px;
+  height: 2.5px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 2px;
+  margin-bottom: 3px;
+}
+
+.orientation-device-screen {
+  flex: 1;
+  width: 100%;
+  background: #0B1120;
+  border-radius: 4px;
+  padding: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(232, 108, 29, 0.3);
+}
+
+.orientation-mock-dashboard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mock-dash-header {
+  height: 6px;
+  background: rgba(232, 108, 29, 0.7);
+  border-radius: 1.5px;
+  width: 70%;
+}
+
+.mock-dash-content {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  padding-top: 4px;
+}
+
+.mock-dash-bar {
+  flex: 1;
+  border-radius: 1.5px 1.5px 0 0;
+  background: rgba(148, 163, 184, 0.4);
+}
+
+.mock-dash-bar.b1 {
+  height: 45%;
+  background: var(--brand-orange);
+}
+
+.mock-dash-bar.b2 {
+  height: 80%;
+  background: rgba(232, 108, 29, 0.85);
+}
+
+.mock-dash-bar.b3 {
+  height: 60%;
+  background: #38BDF8;
+}
+
+/* Indicador de Rotação Órbita */
+.orientation-rotation-indicator {
+  position: absolute;
+  color: var(--brand-orange);
+  opacity: 0.85;
+  animation: orbitPulse 3.6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes phoneRotateCycle {
+  0%, 15% {
+    transform: rotate(0deg) scale(1);
+  }
+  45%, 75% {
+    transform: rotate(90deg) scale(1.08);
+  }
+  95%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes orbitPulse {
+  0%, 15% {
+    opacity: 0.35;
+    transform: scale(0.95);
+  }
+  45%, 75% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  95%, 100% {
+    opacity: 0.35;
+    transform: scale(0.95);
+  }
+}
+
+/* Textos e Badge */
+.orientation-badge-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(232, 108, 29, 0.14);
+  border: 1px solid rgba(232, 108, 29, 0.35);
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+
+.orientation-badge-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brand-orange);
+  box-shadow: 0 0 8px var(--brand-orange);
+  animation: badgeDotBlink 1.4s ease infinite alternate;
+}
+
+@keyframes badgeDotBlink {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+.orientation-badge-text {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #FDBA74;
+}
+
+.orientation-headline {
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #FFFFFF;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.02em;
+}
+
+.orientation-description {
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #94A3B8;
+  margin: 0 0 22px 0;
+}
+
+.orientation-description strong {
+  color: #F1F5F9;
+  font-weight: 600;
+}
+
+.orientation-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.btn-orientation-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--brand-orange);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 11px 18px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(232, 108, 29, 0.4);
+}
+
+.btn-orientation-primary:hover {
+  background: var(--brand-orange-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(232, 108, 29, 0.5);
+}
+
+.btn-orientation-primary:active {
+  transform: translateY(0);
+}
+
+.btn-orientation-secondary {
+  background: transparent;
+  color: #94A3B8;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 6px;
+  padding: 9px 16px;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-orientation-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #F8FAFC;
+  border-color: rgba(148, 163, 184, 0.4);
+}
+
+
