@@ -196,12 +196,6 @@ function setupOrientationEvents() {
         showOverlay();
       }
     }
-
-    // Força reflow dos gráficos Chart.js e mapas Leaflet
-    window.dispatchEvent(new Event('resize'));
-    setTimeout(() => {
-      window.dispatchEvent(new Event('resize'));
-    }, 250);
   };
 
   window.addEventListener('resize', checkOrientationChange);

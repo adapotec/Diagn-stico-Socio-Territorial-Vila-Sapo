@@ -154,11 +154,16 @@ function updateSlideView(prevIndex) {
     }
   }
 
-  // Window resize event to adjust Chart.js and Leaflet immediately and post-transition
-  window.dispatchEvent(new Event('resize'));
-  setTimeout(() => window.dispatchEvent(new Event('resize')), 60);
-  setTimeout(() => window.dispatchEvent(new Event('resize')), 250);
-  setTimeout(() => window.dispatchEvent(new Event('resize')), 500);
+  // Debounced layout adjustment to sync Chart.js and Leaflet cleanly without spamming the event loop
+  triggerLayoutAdjustment(80);
+}
+
+let layoutAdjustTimer = null;
+export function triggerLayoutAdjustment(delay = 80) {
+  clearTimeout(layoutAdjustTimer);
+  layoutAdjustTimer = setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+  }, delay);
 }
 
 function setupSlideNavigation() {
@@ -380,9 +385,8 @@ function setupDiagnosticoSubtabs() {
       if (activeTitleEl) activeTitleEl.textContent = topicTitle;
       if (activeDescEl && topicDesc) activeDescEl.textContent = topicDesc;
 
-      // Trigger chart resize for newly visible panel
-      window.dispatchEvent(new Event('resize'));
-      setTimeout(() => window.dispatchEvent(new Event('resize')), 150);
+      // Trigger chart resize for newly visible panel cleanly
+      triggerLayoutAdjustment(60);
     });
   });
 }

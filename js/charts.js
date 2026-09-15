@@ -7,7 +7,10 @@
 
 import Chart from 'chart.js/auto';
 import { STATIC_DATA } from './data.js';
-import { chartColors, getBarOptions, getDoughnutOptions, getRadarOptions, sortByValue, toPercent } from './utils.js';
+import { chartColors, getBarOptions, getDoughnutOptions, getRadarOptions, sortByValue, toPercent, adapoDataLabelsPlugin } from './utils.js';
+
+// Registrar plugin de exibição direta e permanente das porcentagens (%) em todos os gráficos
+Chart.register(adapoDataLabelsPlugin);
 
 const d = STATIC_DATA;
 const TOTAL = 21; // Base censitária consolidada das famílias às margens do Rio Ingaúra

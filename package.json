@@ -5,9 +5,9 @@
   "description": "Dashboard Diagnóstico Socioterritorial da Vila Sapo - Instituto Ádapo",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "node ./node_modules/vite/bin/vite.js",
+    "build": "node ./node_modules/vite/bin/vite.js build",
+    "preview": "node ./node_modules/vite/bin/vite.js preview"
   },
   "devDependencies": {
     "heic-convert": "^2.1.0",
